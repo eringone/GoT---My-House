@@ -15,6 +15,9 @@
 		9F172D131FD09D9000ED5069 /* SpeechViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F172D121FD09D9000ED5069 /* SpeechViewController.swift */; };
 		9F172D151FD09DA200ED5069 /* SpeechResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F172D141FD09DA200ED5069 /* SpeechResultViewController.swift */; };
 		9F172D171FD09DBF00ED5069 /* NowPlayingAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F172D161FD09DBF00ED5069 /* NowPlayingAnimation.swift */; };
+		9FFD22DE1FD0C7820060A8AA /* HousesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FFD22DD1FD0C7820060A8AA /* HousesTableViewController.swift */; };
+		9FFD22E01FD0C7A00060A8AA /* HouseDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FFD22DF1FD0C7A00060A8AA /* HouseDetailsViewController.swift */; };
+		9FFD22E21FD0C7AD0060A8AA /* HouseWikiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FFD22E11FD0C7AD0060A8AA /* HouseWikiViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +31,9 @@
 		9F172D121FD09D9000ED5069 /* SpeechViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechViewController.swift; sourceTree = "<group>"; };
 		9F172D141FD09DA200ED5069 /* SpeechResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechResultViewController.swift; sourceTree = "<group>"; };
 		9F172D161FD09DBF00ED5069 /* NowPlayingAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NowPlayingAnimation.swift; sourceTree = "<group>"; };
+		9FFD22DD1FD0C7820060A8AA /* HousesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HousesTableViewController.swift; sourceTree = "<group>"; };
+		9FFD22DF1FD0C7A00060A8AA /* HouseDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HouseDetailsViewController.swift; sourceTree = "<group>"; };
+		9FFD22E11FD0C7AD0060A8AA /* HouseWikiViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HouseWikiViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +69,7 @@
 			isa = PBXGroup;
 			children = (
 				9F172D111FD09D5F00ED5069 /* Speech */,
+				9FFD22DC1FD0C73A0060A8AA /* History of Houses */,
 				9F172CFA1FD09CF500ED5069 /* AppDelegate.swift */,
 				9F172D001FD09CF500ED5069 /* Main.storyboard */,
 				9F172D031FD09CF500ED5069 /* Assets.xcassets */,
@@ -88,6 +95,16 @@
 				9F172D161FD09DBF00ED5069 /* NowPlayingAnimation.swift */,
 			);
 			path = Speech;
+			sourceTree = "<group>";
+		};
+		9FFD22DC1FD0C73A0060A8AA /* History of Houses */ = {
+			isa = PBXGroup;
+			children = (
+				9FFD22DD1FD0C7820060A8AA /* HousesTableViewController.swift */,
+				9FFD22DF1FD0C7A00060A8AA /* HouseDetailsViewController.swift */,
+				9FFD22E11FD0C7AD0060A8AA /* HouseWikiViewController.swift */,
+			);
+			path = "History of Houses";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -162,8 +179,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9FFD22E21FD0C7AD0060A8AA /* HouseWikiViewController.swift in Sources */,
 				9F172D171FD09DBF00ED5069 /* NowPlayingAnimation.swift in Sources */,
 				9F172D131FD09D9000ED5069 /* SpeechViewController.swift in Sources */,
+				9FFD22E01FD0C7A00060A8AA /* HouseDetailsViewController.swift in Sources */,
+				9FFD22DE1FD0C7820060A8AA /* HousesTableViewController.swift in Sources */,
 				9F172CFB1FD09CF500ED5069 /* AppDelegate.swift in Sources */,
 				9F172D151FD09DA200ED5069 /* SpeechResultViewController.swift in Sources */,
 			);
