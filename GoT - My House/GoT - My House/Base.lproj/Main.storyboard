@@ -108,7 +108,7 @@
         <!--Root View Controller-->
         <scene sceneID="Vam-m7-iUX">
             <objects>
-                <tableViewController id="V6f-VX-Zja" sceneMemberID="viewController">
+                <tableViewController id="V6f-VX-Zja" customClass="HousesTableViewController" customModule="GoT___My_House" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="7fU-mw-9XL">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -190,10 +190,10 @@
             </objects>
             <point key="canvasLocation" x="3517.5999999999999" y="914.392803598201"/>
         </scene>
-        <!--View Controller-->
+        <!--House Details View Controller-->
         <scene sceneID="4Wb-ot-eJQ">
             <objects>
-                <viewController id="Dnh-Ju-6bn" sceneMemberID="viewController">
+                <viewController id="Dnh-Ju-6bn" customClass="HouseDetailsViewController" customModule="GoT___My_House" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="d2X-Ro-hjw">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
