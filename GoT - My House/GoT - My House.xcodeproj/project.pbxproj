@@ -18,6 +18,7 @@
 		9FFD22DE1FD0C7820060A8AA /* HousesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FFD22DD1FD0C7820060A8AA /* HousesTableViewController.swift */; };
 		9FFD22E01FD0C7A00060A8AA /* HouseDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FFD22DF1FD0C7A00060A8AA /* HouseDetailsViewController.swift */; };
 		9FFD22E21FD0C7AD0060A8AA /* HouseWikiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FFD22E11FD0C7AD0060A8AA /* HouseWikiViewController.swift */; };
+		9FFD22E41FD0E2310060A8AA /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FFD22E31FD0E22B0060A8AA /* WebKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		9FFD22DD1FD0C7820060A8AA /* HousesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HousesTableViewController.swift; sourceTree = "<group>"; };
 		9FFD22DF1FD0C7A00060A8AA /* HouseDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HouseDetailsViewController.swift; sourceTree = "<group>"; };
 		9FFD22E11FD0C7AD0060A8AA /* HouseWikiViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HouseWikiViewController.swift; sourceTree = "<group>"; };
+		9FFD22E31FD0E22B0060A8AA /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,6 +43,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9FFD22E41FD0E2310060A8AA /* WebKit.framework in Frameworks */,
 				9F172D101FD09D1900ED5069 /* Speech.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -82,6 +85,7 @@
 		9F172D0E1FD09D1400ED5069 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9FFD22E31FD0E22B0060A8AA /* WebKit.framework */,
 				9F172D0F1FD09D1400ED5069 /* Speech.framework */,
 			);
 			name = Frameworks;

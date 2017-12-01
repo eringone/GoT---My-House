@@ -20,82 +20,85 @@ class HousesTableViewController: UITableViewController {
 
         // Comment the following line to preserve selection between presentations
         self.clearsSelectionOnViewWillAppear = true
+        
+        for i in 1 ..< 10{
 
-        let search = "https://www.anapioficeandfire.com/api/houses"
-        let url = URL(string: search)
+            let search = "https://www.anapioficeandfire.com/api/houses?page=" + String(i) + "&pageSize=50"
+            let url = URL(string: search)
         
-        let jsonData: Data?
+            let jsonData: Data?
         
-        do {
-            /*
-             Try getting the JSON data from the URL and map it into virtual memory, if possible and safe.
-             Option mappedIfSafe indicates that the file should be mapped into virtual memory, if possible and safe.
-             */
-            jsonData = try Data(contentsOf: url!, options: NSData.ReadingOptions.mappedIfSafe)
-            
-        }
-        catch let error as NSError {
-            
-            showAlertMessage(messageHeader: "JSON Data", messageBody: "Error in retrieving JSON data: \(error.localizedDescription)")
-            return
-        }
-        
-        if let jsonDataFromApiUrl = jsonData {
-            
-            // The JSON data is successfully obtained from the API
-            
             do {
                 /*
-                 JSONSerialization class is used to convert JSON and Foundation objects (e.g., NSDictionary) into each other.
-                 JSONSerialization class method jsonObject returns an NSDictionary object from the given JSON data.
+                 Try getting the JSON data from the URL and map it into virtual memory, if possible and safe.
+                 Option mappedIfSafe indicates that the file should be mapped into virtual memory, if possible and safe.
                  */
-                let jsonDataDictionary = try JSONSerialization.jsonObject(with: jsonDataFromApiUrl, options: JSONSerialization.ReadingOptions.mutableContainers) as! Array<AnyObject>
-                
-                //print(jsonDataDictionary[0])
-                
-                for index in 0 ..< jsonDataDictionary.count {
-                    
-                    // Typecast the returned NSDictionary as Dictionary<String, AnyObject>
-                    let houseIndex = jsonDataDictionary[index] as! NSDictionary
-                    
-                    //*******************
-                    // Obtain House Name
-                    //*******************
-                    
-                    var houseName = ""
-                    if let path = houseIndex["name"] as? String? {
-                        houseName = path!
-                    }
-                    
-                    var houseRegion = ""
-                    if let path = houseIndex["region"] as? String? {
-                        houseRegion = path!
-                    }
-                    
-                    //***************************************************************
-                    // Compose the house string by separting the attributes with "|"
-                    //***************************************************************
-                    
-                    let houseString = houseName + "|" + houseRegion
-                    print(houseString)
-                    
-                    //************************************************
-                    // Add the new house string to the array of houses
-                    //************************************************
-                    
-                    arrayOfHouses.append(houseString)
-                }
+                jsonData = try Data(contentsOf: url!, options: NSData.ReadingOptions.mappedIfSafe)
                 
             }
             catch let error as NSError {
                 
-                showAlertMessage(messageHeader: "JSON Data", messageBody: "Error in JSON Data Serialization: \(error.localizedDescription)")
+                showAlertMessage(messageHeader: "JSON Data", messageBody: "Error in retrieving JSON data: \(error.localizedDescription)")
                 return
             }
-            
-        }
-        else {
-            showAlertMessage(messageHeader: "JSON Data", messageBody: "Unable to obtain the JSON data file!")
+        
+            if let jsonDataFromApiUrl = jsonData {
+                
+                // The JSON data is successfully obtained from the API
+                
+                do {
+                    /*
+                     JSONSerialization class is used to convert JSON and Foundation objects (e.g., NSDictionary) into each other.
+                     JSONSerialization class method jsonObject returns an NSDictionary object from the given JSON data.
+                     */
+                    let jsonDataDictionary = try JSONSerialization.jsonObject(with: jsonDataFromApiUrl, options: JSONSerialization.ReadingOptions.mutableContainers) as! Array<AnyObject>
+                    
+                    //print(jsonDataDictionary[0])
+                    
+                    for index in 0 ..< jsonDataDictionary.count {
+                        
+                        // Typecast the returned NSDictionary as Dictionary<String, AnyObject>
+                        let houseIndex = jsonDataDictionary[index] as! NSDictionary
+                        
+                        //*******************
+                        // Obtain House Name
+                        //*******************
+                        
+                        var houseName = ""
+                        if let path = houseIndex["name"] as? String? {
+                            houseName = path!
+                        }
+                        
+                        var houseRegion = ""
+                        if let path = houseIndex["region"] as? String? {
+                            houseRegion = path!
+                        }
+                        
+                        //***************************************************************
+                        // Compose the house string by separting the attributes with "|"
+                        //***************************************************************
+                        
+                        let houseString = houseName + "|" + houseRegion
+                        print(houseString)
+                        
+                        //************************************************
+                        // Add the new house string to the array of houses
+                        //************************************************
+                        
+                        arrayOfHouses.append(houseString)
+                    }
+                    
+                }
+                catch let error as NSError {
+                    
+                    showAlertMessage(messageHeader: "JSON Data", messageBody: "Error in JSON Data Serialization: \(error.localizedDescription)")
+                    return
+                }
+                
+            }
+            else {
+                showAlertMessage(messageHeader: "JSON Data", messageBody: "Unable to obtain the JSON data file!")
+            }
         }
     }
 
@@ -225,7 +228,7 @@ class HousesTableViewController: UITableViewController {
             let houseWikiViewController: HouseWikiViewController = segue.destination as! HouseWikiViewController
             
             // Pass the data object to the destination view controller
-            //searchedMovieYoutubeViewController.youtubeURL = youtubeURL
+            houseWikiViewController.wikiURL = "http://awoiaf.westeros.org/index.php/House_Algood"
         }
     }
 
