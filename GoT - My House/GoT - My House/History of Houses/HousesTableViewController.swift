@@ -60,10 +60,6 @@ class HousesTableViewController: UITableViewController {
                         // Typecast the returned NSDictionary as Dictionary<String, AnyObject>
                         let houseIndex = jsonDataDictionary[index] as! NSDictionary
                         
-                        //*******************
-                        // Obtain House Name
-                        //*******************
-                        
                         var houseName = ""
                         if let path = houseIndex["name"] as? String? {
                             houseName = path!
