@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -22,6 +21,7 @@
                     <connections>
                         <segue destination="gV1-du-DnK" kind="relationship" relationship="viewControllers" id="lPL-SS-c7b"/>
                         <segue destination="VVr-bj-b4J" kind="relationship" relationship="viewControllers" id="k9i-6b-m83"/>
+                        <segue destination="5dx-0D-Of5" kind="relationship" relationship="viewControllers" id="xQw-bF-6N0"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
@@ -270,11 +270,123 @@
             </objects>
             <point key="canvasLocation" x="3517.5999999999999" y="-672.41379310344837"/>
         </scene>
+        <!--Your House-->
+        <scene sceneID="zEQ-py-ndp">
+            <objects>
+                <viewController id="M0R-an-JKx" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="sbf-xj-eNI">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="28E-Ua-JiJ">
+                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EOc-16-PAE" userLabel="Content View" customClass="UIControl">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="900"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Where would you want to vacation?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hVa-1N-usp">
+                                                <rect key="frame" x="29" y="21" width="316" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Black Sand Beach" translatesAutoresizingMaskIntoConstraints="NO" id="cOQ-vD-WMD">
+                                                <rect key="frame" x="29" y="50" width="150" height="100"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <accessibility key="accessibilityConfiguration">
+                                                    <accessibilityTraits key="traits" button="YES" image="YES"/>
+                                                </accessibility>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Igloo Under the Aurora" translatesAutoresizingMaskIntoConstraints="NO" id="TrB-XX-orz">
+                                                <rect key="frame" x="29" y="165" width="150" height="100"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <accessibility key="accessibilityConfiguration">
+                                                    <accessibilityTraits key="traits" button="YES" image="YES"/>
+                                                </accessibility>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="City" translatesAutoresizingMaskIntoConstraints="NO" id="Qp5-ef-MlA">
+                                                <rect key="frame" x="195" y="50" width="150" height="100"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <accessibility key="accessibilityConfiguration">
+                                                    <accessibilityTraits key="traits" button="YES" image="YES"/>
+                                                </accessibility>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Yosemite National Park" translatesAutoresizingMaskIntoConstraints="NO" id="N1S-sq-o63">
+                                                <rect key="frame" x="195" y="165" width="150" height="100"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <accessibility key="accessibilityConfiguration">
+                                                    <accessibilityTraits key="traits" button="YES" image="YES"/>
+                                                </accessibility>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Favorite Kind of Food?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NVk-PV-6k0">
+                                                <rect key="frame" x="29" y="284" width="316" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Burgers and Fries" translatesAutoresizingMaskIntoConstraints="NO" id="2lz-je-WZD">
+                                                <rect key="frame" x="29" y="313" width="150" height="100"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <accessibility key="accessibilityConfiguration">
+                                                    <accessibilityTraits key="traits" button="YES" image="YES"/>
+                                                </accessibility>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Seafood" translatesAutoresizingMaskIntoConstraints="NO" id="1tD-39-csQ">
+                                                <rect key="frame" x="195" y="313" width="150" height="100"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <accessibility key="accessibilityConfiguration">
+                                                    <accessibilityTraits key="traits" button="YES" image="YES"/>
+                                                </accessibility>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Vegatarian Platter" translatesAutoresizingMaskIntoConstraints="NO" id="7em-NM-tGd">
+                                                <rect key="frame" x="29" y="426" width="150" height="100"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <accessibility key="accessibilityConfiguration">
+                                                    <accessibilityTraits key="traits" button="YES" image="YES"/>
+                                                </accessibility>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Thanksgiving Dinner" translatesAutoresizingMaskIntoConstraints="NO" id="URr-EP-Qfm">
+                                                <rect key="frame" x="195" y="426" width="150" height="100"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <accessibility key="accessibilityConfiguration">
+                                                    <accessibilityTraits key="traits" button="YES" image="YES"/>
+                                                </accessibility>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="EOc-16-PAE" secondAttribute="trailing" id="57m-0e-Eng"/>
+                                    <constraint firstItem="EOc-16-PAE" firstAttribute="top" secondItem="28E-Ua-JiJ" secondAttribute="top" id="M5J-5L-YTh"/>
+                                    <constraint firstItem="EOc-16-PAE" firstAttribute="leading" secondItem="28E-Ua-JiJ" secondAttribute="leading" id="Xxz-YM-eeJ"/>
+                                    <constraint firstAttribute="bottom" secondItem="EOc-16-PAE" secondAttribute="bottom" id="YhE-lC-OrJ"/>
+                                    <constraint firstItem="EOc-16-PAE" firstAttribute="width" secondItem="28E-Ua-JiJ" secondAttribute="width" id="zLG-A5-H4a"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="28E-Ua-JiJ" firstAttribute="top" secondItem="EWU-Eu-k7m" secondAttribute="top" id="7l9-1y-nNF"/>
+                            <constraint firstItem="28E-Ua-JiJ" firstAttribute="leading" secondItem="EWU-Eu-k7m" secondAttribute="leading" id="fCH-j9-VnY"/>
+                            <constraint firstItem="28E-Ua-JiJ" firstAttribute="bottom" secondItem="EWU-Eu-k7m" secondAttribute="bottom" id="q64-t7-yjG"/>
+                            <constraint firstItem="28E-Ua-JiJ" firstAttribute="trailing" secondItem="EWU-Eu-k7m" secondAttribute="trailing" id="tCm-Tr-SC9"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="EWU-Eu-k7m"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Your House" id="xc1-vC-jLa"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="C0n-oR-1lJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2373.5999999999999" y="-1605.2473763118442"/>
+        </scene>
         <!--Quotes-->
         <scene sceneID="zD0-9d-BzP">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="gV1-du-DnK" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Quotes" id="uDQ-5g-wIr"/>
+                    <tabBarItem key="tabBarItem" title="Quotes" image="Tabbaricon-ARWhite" id="uDQ-5g-wIr"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="d1a-2X-hXN">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
@@ -289,5 +401,35 @@
             </objects>
             <point key="canvasLocation" x="1391" y="-672"/>
         </scene>
+        <!--Placement Quiz-->
+        <scene sceneID="Mwh-PF-a0o">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="5dx-0D-Of5" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Placement Quiz" id="yFy-SD-oal"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="wZV-Ki-fDo">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="M0R-an-JKx" kind="relationship" relationship="rootViewController" id="DJp-51-mzs"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JPg-zB-N4a" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1466" y="-1605"/>
+        </scene>
     </scenes>
+    <resources>
+        <image name="Black Sand Beach" width="2000" height="1333"/>
+        <image name="Burgers and Fries" width="1620" height="1080"/>
+        <image name="City" width="570" height="420"/>
+        <image name="Igloo Under the Aurora" width="1280" height="854"/>
+        <image name="Seafood" width="545" height="411"/>
+        <image name="Tabbaricon-ARWhite" width="50" height="50"/>
+        <image name="Thanksgiving Dinner" width="700" height="467"/>
+        <image name="Vegatarian Platter" width="1291" height="967"/>
+        <image name="Yosemite National Park" width="1024" height="800"/>
+    </resources>
 </document>
