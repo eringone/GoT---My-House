@@ -9,11 +9,12 @@
 import UIKit
 import Speech
 
-class SpeechViewController: UIViewController, SFSpeechRecognizerDelegate {
+class SpeechViewController: UIViewController, SFSpeechRecognizerDelegate, UIPickerViewDelegate, UIPickerViewDataSource {
     
     @IBOutlet var textView: UILabel!
     @IBOutlet var microphoneButton: UIButton!
     @IBOutlet var nowPlayingAnimationImageView: UIImageView!
+    @IBOutlet var pickerView: UIPickerView!
     
     let speechRecognizer = SFSpeechRecognizer(locale: Locale.init(identifier: "en-US"))
     
@@ -22,6 +23,9 @@ class SpeechViewController: UIViewController, SFSpeechRecognizerDelegate {
     let audioEngine = AVAudioEngine()
     
     var resultSpeech = ""
+    var charPicked = ""
+    
+    let characters = ["Random", "Bronn", "Brynden Tully", "Cersei", "The Hound", "Jaime Lannister", "Littlefinger", "Olenna Tyrell", "Renly Baratheon", "Tyrion", "Varys"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -77,13 +81,19 @@ class SpeechViewController: UIViewController, SFSpeechRecognizerDelegate {
             
             microphoneButton.setTitle("Start Recording", for: .normal)
             print(resultSpeech)
-            if self.resultSpeech.lowercased() == "give me a quote from game of thrones" {
+            if self.resultSpeech.lowercased() == "give me a quote" {
                 performSegue(withIdentifier: "SpeechResults", sender: self)
             }
             else {
                 self.textView.text = "I couldn't understand what you said. Can you please say it again?"
             }
         } else {
+            let indexNumber: Int = pickerView.selectedRow(inComponent: 0)
+            charPicked = characters[indexNumber]
+            
+            resultSpeech = ""
+            self.textView.text = ""
+            
             startRecording()
             microphoneButton.setTitle("Stop Recording", for: .normal)
             
@@ -169,6 +179,31 @@ class SpeechViewController: UIViewController, SFSpeechRecognizerDelegate {
     }
     
     /*
+     -----------------------------------------------
+     MARK: - UIPickerViewDataSource Protocol Methods
+     -----------------------------------------------
+     */
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        
+        return characters.count
+    }
+    
+    /*
+     --------------------------------------------
+     MARK: - UIPickerViewDelegate Protocol Method
+     --------------------------------------------
+     */
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        
+        return characters[row]
+    }
+    
+    /*
      -----------------------------
      MARK: - Now Playing Animation
      -----------------------------
@@ -195,6 +230,26 @@ class SpeechViewController: UIViewController, SFSpeechRecognizerDelegate {
     
     func stopNowPlayingAnimation() {
         nowPlayingAnimationImageView!.stopAnimating()
+    }
+    
+    /*
+     -------------------------
+     MARK: - Prepare For Segue
+     -------------------------
+     */
+    
+    // This method is called by the system whenever you invoke the method performSegue
+    // You never call this method. It is invoked by the system.
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == "SpeechResults" {
+            
+            // Obtain the object reference of the destination view controller
+            let speechResultViewController: SpeechResultViewController = segue.destination as! SpeechResultViewController
+            print(charPicked)
+            // Pass the data object to the destination view controller
+            speechResultViewController.charPicked = charPicked
+        }
     }
 }
 

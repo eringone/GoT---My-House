@@ -13,11 +13,57 @@ class SpeechResultViewController: UIViewController {
     @IBOutlet var quoteLabel: UILabel!
     @IBOutlet var characterLabel: UILabel!
     
+    var charPicked = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Create a URL struct data structure from the API query URL string
-        let url = URL(string: "https://got-quotes.herokuapp.com/quotes")
+        var url = URL(string: "https://got-quotes.herokuapp.com/quotes")
+        
+        if charPicked == "Random" {
+            // Create a URL struct data structure from the API query URL string
+            url = URL(string: "https://got-quotes.herokuapp.com/quotes")
+        }
+        else if charPicked == "Bronn" {
+            // Create a URL struct data structure from the API query URL string
+            url = URL(string: "https://got-quotes.herokuapp.com/quotes?char=bronn")
+        }
+        else if charPicked == "Brynden Tully" {
+            // Create a URL struct data structure from the API query URL string
+            url = URL(string: "https://got-quotes.herokuapp.com/quotes?char=brynden")
+        }
+        else if charPicked == "Cersei" {
+            // Create a URL struct data structure from the API query URL string
+            url = URL(string: "https://got-quotes.herokuapp.com/quotes?char=cersei")
+        }
+        else if charPicked == "The Hound" {
+            // Create a URL struct data structure from the API query URL string
+            url = URL(string: "https://got-quotes.herokuapp.com/quotes?char=hound")
+        }
+        else if charPicked == "Jaime Lannister" {
+            // Create a URL struct data structure from the API query URL string
+            url = URL(string: "https://got-quotes.herokuapp.com/quotes?char=jaime")
+        }
+        else if charPicked == "Littlefinger" {
+            // Create a URL struct data structure from the API query URL string
+            url = URL(string: "https://got-quotes.herokuapp.com/quotes?char=littlefinger")
+        }
+        else if charPicked == "Olenna Tyrell" {
+            // Create a URL struct data structure from the API query URL string
+            url = URL(string: "https://got-quotes.herokuapp.com/quotes?char=olenna")
+        }
+        else if charPicked == "Renly Baratheon" {
+            // Create a URL struct data structure from the API query URL string
+            url = URL(string: "https://got-quotes.herokuapp.com/quotes?char=renly")
+        }
+        else if charPicked == "Tyrion" {
+            // Create a URL struct data structure from the API query URL string
+            url = URL(string: "https://got-quotes.herokuapp.com/quotes?char=tyrion")
+        }
+        else {
+            // Create a URL struct data structure from the API query URL string
+            url = URL(string: "https://got-quotes.herokuapp.com/quotes?char=varys")
+        }
         
         let jsonData: Data?
         
