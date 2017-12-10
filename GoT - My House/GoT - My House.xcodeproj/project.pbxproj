@@ -19,6 +19,9 @@
 		9FFD22E01FD0C7A00060A8AA /* HouseDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FFD22DF1FD0C7A00060A8AA /* HouseDetailsViewController.swift */; };
 		9FFD22E21FD0C7AD0060A8AA /* HouseWikiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FFD22E11FD0C7AD0060A8AA /* HouseWikiViewController.swift */; };
 		9FFD22E41FD0E2310060A8AA /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FFD22E31FD0E22B0060A8AA /* WebKit.framework */; };
+		B7A71E521FDCDCE90066C383 /* UserData.plist in Resources */ = {isa = PBXBuildFile; fileRef = B7A71E511FDCDCE90066C383 /* UserData.plist */; };
+		B7D6DE941FDCC0D9007BD359 /* QuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D6DE931FDCC0D9007BD359 /* QuizViewController.swift */; };
+		B7D6DE961FDCC663007BD359 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D6DE951FDCC663007BD359 /* WelcomeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +39,9 @@
 		9FFD22DF1FD0C7A00060A8AA /* HouseDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HouseDetailsViewController.swift; sourceTree = "<group>"; };
 		9FFD22E11FD0C7AD0060A8AA /* HouseWikiViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HouseWikiViewController.swift; sourceTree = "<group>"; };
 		9FFD22E31FD0E22B0060A8AA /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		B7A71E511FDCDCE90066C383 /* UserData.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = UserData.plist; sourceTree = "<group>"; };
+		B7D6DE931FDCC0D9007BD359 /* QuizViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizViewController.swift; sourceTree = "<group>"; };
+		B7D6DE951FDCC663007BD359 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +77,7 @@
 		9F172CF91FD09CF500ED5069 /* GoT - My House */ = {
 			isa = PBXGroup;
 			children = (
+				B7D6DE921FDCC0A9007BD359 /* Placement Quiz */,
 				9F172D111FD09D5F00ED5069 /* Speech */,
 				9FFD22DC1FD0C73A0060A8AA /* History of Houses */,
 				9F172CFA1FD09CF500ED5069 /* AppDelegate.swift */,
@@ -78,6 +85,7 @@
 				9F172D031FD09CF500ED5069 /* Assets.xcassets */,
 				9F172D051FD09CF500ED5069 /* LaunchScreen.storyboard */,
 				9F172D081FD09CF500ED5069 /* Info.plist */,
+				B7A71E511FDCDCE90066C383 /* UserData.plist */,
 			);
 			path = "GoT - My House";
 			sourceTree = "<group>";
@@ -109,6 +117,15 @@
 				9FFD22E11FD0C7AD0060A8AA /* HouseWikiViewController.swift */,
 			);
 			path = "History of Houses";
+			sourceTree = "<group>";
+		};
+		B7D6DE921FDCC0A9007BD359 /* Placement Quiz */ = {
+			isa = PBXGroup;
+			children = (
+				B7D6DE931FDCC0D9007BD359 /* QuizViewController.swift */,
+				B7D6DE951FDCC663007BD359 /* WelcomeViewController.swift */,
+			);
+			path = "Placement Quiz";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -171,6 +188,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9F172D071FD09CF500ED5069 /* LaunchScreen.storyboard in Resources */,
+				B7A71E521FDCDCE90066C383 /* UserData.plist in Resources */,
 				9F172D041FD09CF500ED5069 /* Assets.xcassets in Resources */,
 				9F172D021FD09CF500ED5069 /* Main.storyboard in Resources */,
 			);
@@ -183,9 +201,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B7D6DE961FDCC663007BD359 /* WelcomeViewController.swift in Sources */,
 				9FFD22E21FD0C7AD0060A8AA /* HouseWikiViewController.swift in Sources */,
 				9F172D171FD09DBF00ED5069 /* NowPlayingAnimation.swift in Sources */,
 				9F172D131FD09D9000ED5069 /* SpeechViewController.swift in Sources */,
+				B7D6DE941FDCC0D9007BD359 /* QuizViewController.swift in Sources */,
 				9FFD22E01FD0C7A00060A8AA /* HouseDetailsViewController.swift in Sources */,
 				9FFD22DE1FD0C7820060A8AA /* HousesTableViewController.swift in Sources */,
 				9F172CFB1FD09CF500ED5069 /* AppDelegate.swift in Sources */,
