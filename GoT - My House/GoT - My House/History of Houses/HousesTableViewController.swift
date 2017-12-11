@@ -193,7 +193,9 @@ class HousesTableViewController: UITableViewController {
         
         // Obtain the youtube key of the movie whose Detail Disclosure button is tapped
         let houseData: [String] = (arrayOfHouses[indexPath.row] as AnyObject).components(separatedBy: "|")
-        //youtubeURL = "http://www.youtube.com/embed/\(movieData[8])"
+        var house = houseData[0]
+        house = house.replacingOccurrences(of: " ", with: "_")
+        wikiURL = "http://awoiaf.westeros.org/index.php/" + house
         
         // Perform the segue named SearchedMovieYouTube
         performSegue(withIdentifier: "House Wiki", sender: self)
@@ -215,7 +217,7 @@ class HousesTableViewController: UITableViewController {
             let houseDetailsViewController: HouseDetailsViewController = segue.destination as! HouseDetailsViewController
             
             // Pass the data object to the destination view controller
-            //searchedMovieDetailsViewController.selectedMoviePassed = selectedMovie
+            houseDetailsViewController.selectedHouse = selectedHouse
         }
         
         if segue.identifier == "House Wiki" {
@@ -224,7 +226,7 @@ class HousesTableViewController: UITableViewController {
             let houseWikiViewController: HouseWikiViewController = segue.destination as! HouseWikiViewController
             
             // Pass the data object to the destination view controller
-            houseWikiViewController.wikiURL = "http://awoiaf.westeros.org/index.php/House_Algood"
+            houseWikiViewController.wikiURL = wikiURL //"http://awoiaf.westeros.org/index.php/House_Algood"
         }
     }
 

@@ -9,11 +9,30 @@
 import UIKit
 
 class HouseDetailsViewController: UIViewController {
+    
+    @IBOutlet var houseNavTitle: UINavigationItem!
+    @IBOutlet var name: UILabel!
+    @IBOutlet var region: UILabel!
+    @IBOutlet var coatOfArms: UILabel!
+    @IBOutlet var words: UILabel!
+    @IBOutlet var titles: UILabel!
+    @IBOutlet var seats: UILabel!
+    @IBOutlet var currentLord: UILabel!
+    @IBOutlet var heir: UILabel!
+    @IBOutlet var founded: UILabel!
+    @IBOutlet var founder: UILabel!
+    @IBOutlet var swornMembers: UILabel!
+    
+    var selectedHouse = ""
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        let houseData: [String] = selectedHouse.components(separatedBy: "|")
+        
+        houseNavTitle.title = houseData[0]
+        name.text = houseData[0]
+        region.text = houseData[1]
     }
 
     override func didReceiveMemoryWarning() {
