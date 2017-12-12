@@ -12,7 +12,9 @@ class HousesTableViewController: UITableViewController {
     
     // Instance Variables
     var arrayOfHouses = [String]()
+    var arrayOfHousesArray = [[[String]]]()
     var selectedHouse = ""
+    var selectedArray = [[String]]()
     var wikiURL = ""
 
     override func viewDidLoad() {
@@ -70,18 +72,66 @@ class HousesTableViewController: UITableViewController {
                             houseRegion = path!
                         }
                         
+                        var coatOfArms = ""
+                        if let path = houseIndex["coatOfArms"] as? String? {
+                            coatOfArms = path!
+                        }
+                        
+                        var words = ""
+                        if let path = houseIndex["words"] as? String? {
+                            words = path!
+                        }
+                        
+                        var titles: [String] = []
+                        if let path = houseIndex["titles"] as? [String]? {
+                            titles = path!
+                        }
+                        
+                        var seats: [String] = []
+                        if let path = houseIndex["seats"] as? [String]? {
+                            seats = path!
+                        }
+                        
+                        var currentLord = ""
+                        if let path = houseIndex["currentLord"] as? String? {
+                            currentLord = path!
+                        }
+                        
+                        var heir = ""
+                        if let path = houseIndex["heir"] as? String? {
+                            heir = path!
+                        }
+                        
+                        var founded = ""
+                        if let path = houseIndex["founded"] as? String? {
+                            founded = path!
+                        }
+                        
+                        var founder = ""
+                        if let path = houseIndex["founder"] as? String? {
+                            founder = path!
+                        }
+                        
+                        var swornMembers: [String] = []
+                        if let path = houseIndex["swornMembers"] as? [String]? {
+                           swornMembers = path!
+                        }
+                        
                         //***************************************************************
                         // Compose the house string by separting the attributes with "|"
                         //***************************************************************
                         
-                        let houseString = houseName + "|" + houseRegion
-                        print(houseString)
+                        let houseString = houseName + "|" + houseRegion + "|" + coatOfArms + "|" + words + "|" + "titles" +
+                            "|" + "seats" + "|" + currentLord + "|" + heir + "|" + founded + "|" + founder + "|" + "swornMembers"
+                        
+                        let houseArray = [titles, seats, swornMembers]
                         
                         //************************************************
                         // Add the new house string to the array of houses
                         //************************************************
                         
                         arrayOfHouses.append(houseString)
+                        arrayOfHousesArray.append(houseArray)
                     }
                     
                 }
@@ -183,6 +233,7 @@ class HousesTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         selectedHouse = arrayOfHouses[indexPath.row]
+        selectedArray = arrayOfHousesArray[indexPath.row]
         
         // Perform the segue named MovieYouTube
         performSegue(withIdentifier: "House Details", sender: self)
@@ -218,6 +269,7 @@ class HousesTableViewController: UITableViewController {
             
             // Pass the data object to the destination view controller
             houseDetailsViewController.selectedHouse = selectedHouse
+            houseDetailsViewController.selectedArray = selectedArray
         }
         
         if segue.identifier == "House Wiki" {

@@ -519,7 +519,7 @@
         <scene sceneID="7Mi-Hq-oji">
             <objects>
                 <navigationController id="VVr-bj-b4J" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="History of Houses" id="GQc-eX-X5Z"/>
+                    <tabBarItem key="tabBarItem" title="History of Houses" image="house" id="GQc-eX-X5Z"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="86N-AY-Dm9">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -584,7 +584,7 @@
         <scene sceneID="zD0-9d-BzP">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="gV1-du-DnK" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Quotes" image="Tabbaricon-ARWhite" id="uDQ-5g-wIr"/>
+                    <tabBarItem key="tabBarItem" title="Quotes" image="quote" id="uDQ-5g-wIr"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="d1a-2X-hXN">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
@@ -959,10 +959,11 @@
         <image name="Sleep" width="1258" height="712"/>
         <image name="Streaming Apps" width="600" height="397"/>
         <image name="TOTS Flag" width="407" height="300"/>
-        <image name="Tabbaricon-ARWhite" width="50" height="50"/>
         <image name="Thanksgiving Dinner" width="700" height="467"/>
         <image name="Vegatarian Platter" width="1291" height="967"/>
         <image name="Video Games" width="768" height="432"/>
         <image name="Yosemite National Park" width="1024" height="800"/>
+        <image name="house" width="30" height="30"/>
+        <image name="quote" width="30" height="30"/>
     </resources>
 </document>
