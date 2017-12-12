@@ -9,12 +9,12 @@
 import UIKit
 
 class QuizViewController: UIViewController {
-
+    let applicationDelegate: AppDelegate = UIApplication.shared.delegate as! AppDelegate
     var checkmarkImage: UIImageView!
     
     @IBOutlet var beachButton: UIButton!
     //@IBOutlet var checkmarkImage: UIImageView!
-    var valuesFromAnswers = [Int]()
+    var valuesFromAnswers : [Int] = [0, 0] //, 0, 0, 0, 0]
     /*
      Values will be evaluated at the end of the quiz
      1 = Targaryen
@@ -23,6 +23,7 @@ class QuizViewController: UIViewController {
      4 = Baratheon
      value with the most duplicates will decide house
      */
+    var nameToPass = String()
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -34,38 +35,102 @@ class QuizViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
+    /*
+     -----------------------------
+     MARK: - Question 1 Button Tapped Handlers
+     -----------------------------
+     */
+    /* ----------------------- Start ---------------------------- */
     @IBAction func beachButtonTapped(_ sender: Any) {
-        // attempting to overlay a checkmark on the selected button's image, not working right now
-        
-        //let bgimg = UIImage(named: "Black Sand Beach.jpeg") // The image used as a background
-        let bgimgview = UIImageView(frame: CGRect(x: 29, y: 46, width: 100, height: 150)) // Create the view holding the image
-        //bgimgview.frame = CGRect(x: 29, y: 46, width: 100, height: 150) // The size of the background image
-        bgimgview.image = UIImage(named: "Black Sand Beach.jpeg")
-        
-        checkmarkImage = UIImageView(frame: CGRect(x: 29, y: 100, width: 30, height: 42))
-        checkmarkImage.image = UIImage(named: "checkmark.png")
-        //checkmarkImage
-        // checkmarkImage.isUserInteractionEnabled = true
-        //bgimgview.addSubview(checkmarkImage)
-        //self.view.addSubview(checkmarkImage)
-        
-        valuesFromAnswers.append(1);
+        valuesFromAnswers[0] = 1
+        print("Targaryen")
+    }
+    
+    @IBAction func cityButtonTapped(_ sender: UIButton) {
+        valuesFromAnswers[0] = 2
+        print("Lannister")
+    }
+    
+    @IBAction func iglooButtonTapped(_ sender: UIButton) {
+        valuesFromAnswers[0] = 3
+        print("Stark")
+    }
+    
+    @IBAction func forestButtonTapped(_ sender: UIButton) {
+        valuesFromAnswers[0] = 4
+        print("Baratheon")
+    }
+    
+    /* ----------------------- End ---------------------------- */
+    
+    /*
+     -----------------------------
+     MARK: - Question 2 Button Tapped Handlers
+     -----------------------------
+     */
+    /* ----------------------- Start ---------------------------- */
+    
+    @IBAction func seafoodButtonTapped(_ sender: UIButton) {
+        valuesFromAnswers[1] = 1
+        print("Targaryen")
+    }
+    
+    @IBAction func burgerButtonTapped(_ sender: UIButton) {
+        valuesFromAnswers[1] = 2
+        print("Lannister")
+    }
+    
+    @IBAction func turkeyButtonTapped(_ sender: UIButton) {
+        valuesFromAnswers[1] = 3
+        print("Stark")
+    }
+
+    
+    @IBAction func vegetarianButtonTapped(_ sender: UIButton) {
+        valuesFromAnswers[1] = 4
+        print("Baratheon")
     }
     
     
+    /* ----------------------- End ---------------------------- */
     
     
     
+
+    @IBAction func submitButtonTapped(_ sender: UIButton) {
+        applicationDelegate.userData[0] = "Saved"
+        
+        let countedSet = NSCountedSet(array: valuesFromAnswers)
+        let mostFrequent = countedSet.max { countedSet.count(for: $0) < countedSet.count(for: $1) } as! Int
+        if mostFrequent == 1 {
+            applicationDelegate.userData[1] = "Targaryen"
+        }
+        else if mostFrequent == 2 {
+            applicationDelegate.userData[1] = "Lannister"
+        }
+        else if mostFrequent == 3 {
+            applicationDelegate.userData[1] = "Stark"
+        }
+        else if mostFrequent == 4 {
+            applicationDelegate.userData[1] = "Baratheon"
+        }
+        
+        nameToPass = applicationDelegate.userData[1] as! String
+        performSegue(withIdentifier: "Show Results", sender: self)
+    }
     
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        if segue.identifier == "Show Results" {
+            let resultsVC: ResultsViewController = segue.destination as! ResultsViewController
+            resultsVC.houseNamePassed = nameToPass
+        }
     }
-    */
+    
 
 }

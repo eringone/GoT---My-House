@@ -13,15 +13,42 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
+    var userData : NSMutableArray = NSMutableArray()
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        let paths = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)
+        let documentDirectoryPath = paths[0] as String
+        
+        let plistFilePathInDocumentDirectory = documentDirectoryPath + "/UserData.plist"
+        let arrayFromFile : NSMutableArray? = NSMutableArray(contentsOfFile: plistFilePathInDocumentDirectory)
+        
+        if let arrayFromFileInDocumentDirectory = arrayFromFile {
+            userData = arrayFromFileInDocumentDirectory
+        }
+        else {
+            // Obtain the file path to the plist file in the mainBundle (project folder)
+            let plistFilePathInMainBundle = Bundle.main.path(forResource: "UserData", ofType: "plist")
+            
+            // Instantiate an NSMutableDictionary object
+            
+            let arrayFromFileInMainBundle: NSMutableArray? = NSMutableArray(contentsOfFile: plistFilePathInMainBundle!)
+            // Store the object reference into the instance variable
+            userData = arrayFromFileInMainBundle!
+        }
         return true
     }
 
     func applicationWillResignActive(_ application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
         // Use this method to pause ongoing tasks, disable timers, and invalidate graphics rendering callbacks. Games should use this method to pause the game.
+        
+        
+        let paths = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)
+        let documentDirectoryPath = paths[0] as String
+        
+        // Add the plist filename to the document directory path to obtain an absolute path to the plist filename
+        let plistFilePathInDocumentDirectory = documentDirectoryPath + "/UserData.plist"
+        userData.write(toFile: plistFilePathInDocumentDirectory, atomically: true)
     }
 
     func applicationDidEnterBackground(_ application: UIApplication) {

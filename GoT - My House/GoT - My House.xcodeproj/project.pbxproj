@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		85F4E5FD1FDF8DC4005AA764 /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F4E5FC1FDF8DC4005AA764 /* ResultsViewController.swift */; };
 		9F172CFB1FD09CF500ED5069 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F172CFA1FD09CF500ED5069 /* AppDelegate.swift */; };
 		9F172D021FD09CF500ED5069 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F172D001FD09CF500ED5069 /* Main.storyboard */; };
 		9F172D041FD09CF500ED5069 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F172D031FD09CF500ED5069 /* Assets.xcassets */; };
@@ -25,6 +26,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		85F4E5FC1FDF8DC4005AA764 /* ResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
 		9F172CF71FD09CF500ED5069 /* GoT - My House.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GoT - My House.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F172CFA1FD09CF500ED5069 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9F172D011FD09CF500ED5069 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -124,6 +126,7 @@
 			children = (
 				B7D6DE931FDCC0D9007BD359 /* QuizViewController.swift */,
 				B7D6DE951FDCC663007BD359 /* WelcomeViewController.swift */,
+				85F4E5FC1FDF8DC4005AA764 /* ResultsViewController.swift */,
 			);
 			path = "Placement Quiz";
 			sourceTree = "<group>";
@@ -204,6 +207,7 @@
 				B7D6DE961FDCC663007BD359 /* WelcomeViewController.swift in Sources */,
 				9FFD22E21FD0C7AD0060A8AA /* HouseWikiViewController.swift in Sources */,
 				9F172D171FD09DBF00ED5069 /* NowPlayingAnimation.swift in Sources */,
+				85F4E5FD1FDF8DC4005AA764 /* ResultsViewController.swift in Sources */,
 				9F172D131FD09D9000ED5069 /* SpeechViewController.swift in Sources */,
 				B7D6DE941FDCC0D9007BD359 /* QuizViewController.swift in Sources */,
 				9FFD22E01FD0C7A00060A8AA /* HouseDetailsViewController.swift in Sources */,

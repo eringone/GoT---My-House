@@ -580,185 +580,6 @@
             </objects>
             <point key="canvasLocation" x="3517.5999999999999" y="-672.41379310344837"/>
         </scene>
-        <!--Your House-->
-        <scene sceneID="zEQ-py-ndp">
-            <objects>
-                <viewController id="M0R-an-JKx" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="sbf-xj-eNI">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="28E-Ua-JiJ">
-                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
-                                <subviews>
-                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EOc-16-PAE" userLabel="Content View" customClass="UIControl">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="1500"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Where would you want to vacation?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hVa-1N-usp">
-                                                <rect key="frame" x="29" y="21" width="316" height="21"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Favorite kind of food?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NVk-PV-6k0">
-                                                <rect key="frame" x="29" y="284" width="316" height="21"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Burgers and Fries" translatesAutoresizingMaskIntoConstraints="NO" id="2lz-je-WZD">
-                                                <rect key="frame" x="29" y="313" width="150" height="100"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <accessibility key="accessibilityConfiguration">
-                                                    <accessibilityTraits key="traits" button="YES" image="YES"/>
-                                                </accessibility>
-                                            </imageView>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Seafood" translatesAutoresizingMaskIntoConstraints="NO" id="1tD-39-csQ">
-                                                <rect key="frame" x="195" y="313" width="150" height="100"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <accessibility key="accessibilityConfiguration">
-                                                    <accessibilityTraits key="traits" button="YES" image="YES"/>
-                                                </accessibility>
-                                            </imageView>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Vegatarian Platter" translatesAutoresizingMaskIntoConstraints="NO" id="7em-NM-tGd">
-                                                <rect key="frame" x="29" y="426" width="150" height="100"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <accessibility key="accessibilityConfiguration">
-                                                    <accessibilityTraits key="traits" button="YES" image="YES"/>
-                                                </accessibility>
-                                            </imageView>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Thanksgiving Dinner" translatesAutoresizingMaskIntoConstraints="NO" id="URr-EP-Qfm">
-                                                <rect key="frame" x="195" y="426" width="150" height="100"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <accessibility key="accessibilityConfiguration">
-                                                    <accessibilityTraits key="traits" button="YES" image="YES"/>
-                                                </accessibility>
-                                            </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Friday night plans?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TOY-Xh-1nT">
-                                                <rect key="frame" x="29" y="539" width="316" height="21"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Video Games" translatesAutoresizingMaskIntoConstraints="NO" id="i42-X7-rkx">
-                                                <rect key="frame" x="29" y="568" width="150" height="100"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <accessibility key="accessibilityConfiguration">
-                                                    <accessibilityTraits key="traits" button="YES" image="YES"/>
-                                                </accessibility>
-                                            </imageView>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Sleep" translatesAutoresizingMaskIntoConstraints="NO" id="Iyr-TK-PRr">
-                                                <rect key="frame" x="195" y="568" width="150" height="100"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <accessibility key="accessibilityConfiguration">
-                                                    <accessibilityTraits key="traits" button="YES" image="YES"/>
-                                                </accessibility>
-                                            </imageView>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="TOTS Flag" translatesAutoresizingMaskIntoConstraints="NO" id="Dny-Ir-ium">
-                                                <rect key="frame" x="29" y="681" width="150" height="100"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <accessibility key="accessibilityConfiguration">
-                                                    <accessibilityTraits key="traits" button="YES" image="YES"/>
-                                                </accessibility>
-                                            </imageView>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Streaming Apps" translatesAutoresizingMaskIntoConstraints="NO" id="bSp-wK-H8T">
-                                                <rect key="frame" x="195" y="681" width="150" height="100"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <accessibility key="accessibilityConfiguration">
-                                                    <accessibilityTraits key="traits" button="YES" image="YES"/>
-                                                </accessibility>
-                                            </imageView>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Island" translatesAutoresizingMaskIntoConstraints="NO" id="9ng-n5-J2u">
-                                                <rect key="frame" x="29" y="841" width="150" height="100"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <accessibility key="accessibilityConfiguration">
-                                                    <accessibilityTraits key="traits" button="YES" image="YES"/>
-                                                </accessibility>
-                                            </imageView>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Lamborghini" translatesAutoresizingMaskIntoConstraints="NO" id="c2M-U5-1Cy">
-                                                <rect key="frame" x="195" y="841" width="150" height="100"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <accessibility key="accessibilityConfiguration">
-                                                    <accessibilityTraits key="traits" button="YES" image="YES"/>
-                                                </accessibility>
-                                            </imageView>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Jet" translatesAutoresizingMaskIntoConstraints="NO" id="GpN-R6-VCY">
-                                                <rect key="frame" x="29" y="954" width="150" height="100"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <accessibility key="accessibilityConfiguration">
-                                                    <accessibilityTraits key="traits" button="YES" image="YES"/>
-                                                </accessibility>
-                                            </imageView>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Mansion" translatesAutoresizingMaskIntoConstraints="NO" id="YO3-wL-gtX">
-                                                <rect key="frame" x="195" y="954" width="150" height="100"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <accessibility key="accessibilityConfiguration">
-                                                    <accessibilityTraits key="traits" button="YES" image="YES"/>
-                                                </accessibility>
-                                            </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="First luxury item you buy after winning the lottery?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NSZ-Xx-OOK">
-                                                <rect key="frame" x="29" y="789" width="316" height="44"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1IE-n5-2I7">
-                                                <rect key="frame" x="134" y="1447" width="106" height="30"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <state key="normal" title="Done"/>
-                                            </button>
-                                            <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dqO-bz-h1K">
-                                                <rect key="frame" x="29" y="50" width="150" height="100"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <state key="normal" title="Button" image="Black Sand Beach"/>
-                                                <connections>
-                                                    <action selector="beachButtonTapped:" destination="M0R-an-JKx" eventType="touchUpInside" id="8rt-jA-5lO"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ytk-cz-ncy">
-                                                <rect key="frame" x="195" y="50" width="150" height="100"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <state key="normal" title="Button" image="City"/>
-                                            </button>
-                                            <button opaque="NO" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AHu-1C-j3K">
-                                                <rect key="frame" x="29" y="165" width="150" height="100"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <state key="normal" title="Button" image="Igloo Under the Aurora"/>
-                                            </button>
-                                            <button opaque="NO" tag="4" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ayt-By-MJb">
-                                                <rect key="frame" x="195" y="165" width="150" height="100"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <state key="normal" title="Button" image="Yosemite National Park"/>
-                                            </button>
-                                        </subviews>
-                                        <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
-                                    </view>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstItem="EOc-16-PAE" firstAttribute="width" secondItem="28E-Ua-JiJ" secondAttribute="width" id="1qk-KG-bqT"/>
-                                </constraints>
-                            </scrollView>
-                        </subviews>
-                        <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
-                        <constraints>
-                            <constraint firstItem="28E-Ua-JiJ" firstAttribute="top" secondItem="EWU-Eu-k7m" secondAttribute="top" id="7l9-1y-nNF"/>
-                            <constraint firstItem="28E-Ua-JiJ" firstAttribute="leading" secondItem="EWU-Eu-k7m" secondAttribute="leading" id="fCH-j9-VnY"/>
-                            <constraint firstItem="28E-Ua-JiJ" firstAttribute="bottom" secondItem="EWU-Eu-k7m" secondAttribute="bottom" id="q64-t7-yjG"/>
-                            <constraint firstItem="28E-Ua-JiJ" firstAttribute="trailing" secondItem="EWU-Eu-k7m" secondAttribute="trailing" id="tCm-Tr-SC9"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="EWU-Eu-k7m"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="Your House" id="xc1-vC-jLa"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="C0n-oR-1lJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3946" y="-1579"/>
-        </scene>
         <!--Quotes-->
         <scene sceneID="zD0-9d-BzP">
             <objects>
@@ -867,86 +688,190 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e4F-Ef-iTq">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="e4F-Ef-iTq">
                                 <rect key="frame" x="0.0" y="64" width="375" height="554"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VHg-lm-Dyu">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="900"/>
+                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VHg-lm-Dyu">
+                                        <rect key="frame" x="0.0" y="-891" width="375" height="1444"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Where would you want to vacation?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KTF-1V-3gG">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Where would you want to vacation?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KTF-1V-3gG">
                                                 <rect key="frame" x="29" y="17" width="316" height="21"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="316" id="9sp-Pa-v0u"/>
-                                                    <constraint firstAttribute="height" constant="21" id="flb-rX-utp"/>
-                                                </constraints>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d8M-Ng-d0e">
+                                            <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d8M-Ng-d0e">
                                                 <rect key="frame" x="29" y="46" width="150" height="100"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="100" id="Kco-dd-NLY"/>
-                                                    <constraint firstAttribute="width" constant="150" id="tr7-9r-BSG"/>
-                                                </constraints>
-                                                <state key="normal" title="Button" image="Black Sand Beach" backgroundImage=" "/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="Beach Button" image="Black Sand Beach" backgroundImage=" "/>
                                                 <connections>
                                                     <action selector="beachButtonTapped:" destination="6NC-WZ-jZe" eventType="touchUpInside" id="4hd-df-1Az"/>
-                                                    <action selector="beachButtonTapped:" destination="M0R-an-JKx" eventType="touchUpInside" id="rmu-dp-a0i"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gpD-M7-Pd9">
-                                                <rect key="frame" x="195" y="46" width="150" height="100"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="150" id="VXq-vA-2oQ"/>
-                                                    <constraint firstAttribute="height" constant="100" id="yNm-C7-UG5"/>
-                                                </constraints>
-                                                <state key="normal" title="Button" image="City"/>
-                                            </button>
-                                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6rX-Xg-7b6">
+                                            <button opaque="NO" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6rX-Xg-7b6">
                                                 <rect key="frame" x="29" y="161" width="150" height="100"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="100" id="RLq-iY-jkn"/>
-                                                    <constraint firstAttribute="width" constant="150" id="SS6-ao-uIh"/>
-                                                </constraints>
-                                                <state key="normal" title="Button" image="Igloo Under the Aurora"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="Igloo Button" image="Igloo Under the Aurora"/>
+                                                <connections>
+                                                    <action selector="iglooButtonTapped:" destination="6NC-WZ-jZe" eventType="touchUpInside" id="5Vi-SH-hff"/>
+                                                </connections>
                                             </button>
-                                            <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Uc-A3-9eQ">
+                                            <button opaque="NO" tag="4" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Uc-A3-9eQ">
                                                 <rect key="frame" x="195" y="161" width="150" height="100"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="150" id="Z13-ER-vfY"/>
-                                                    <constraint firstAttribute="height" constant="100" id="klV-KQ-wOV"/>
-                                                </constraints>
-                                                <state key="normal" title="Button" image="Yosemite National Park"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="Forest Button" image="Yosemite National Park"/>
+                                                <connections>
+                                                    <action selector="forestButtonTapped:" destination="6NC-WZ-jZe" eventType="touchUpInside" id="HEy-dS-Lod"/>
+                                                </connections>
+                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Favorite kind of food?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yes-Na-RNm">
+                                                <rect key="frame" x="29" y="275" width="316" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gpD-M7-Pd9">
+                                                <rect key="frame" x="195" y="46" width="150" height="100"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="City Button" image="City"/>
+                                                <connections>
+                                                    <action selector="cityButtonTapped:" destination="6NC-WZ-jZe" eventType="touchUpInside" id="lVM-6R-X9l"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rcf-j4-laJ">
+                                                <rect key="frame" x="29" y="304" width="150" height="100"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="Burger Button" image="Burgers and Fries" backgroundImage=" "/>
+                                                <connections>
+                                                    <action selector="burgerButtonTapped:" destination="6NC-WZ-jZe" eventType="touchUpInside" id="Cha-1F-zCk"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="owZ-i5-PCv">
+                                                <rect key="frame" x="195" y="304" width="150" height="100"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="Seafood Button" image="Seafood" backgroundImage=" "/>
+                                                <connections>
+                                                    <action selector="seafoodButtonTapped:" destination="6NC-WZ-jZe" eventType="touchUpInside" id="hfT-tc-VeP"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tAw-Vp-ID1">
+                                                <rect key="frame" x="29" y="417" width="150" height="100"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="Vegetarian Button" image="Vegatarian Platter" backgroundImage=" "/>
+                                                <connections>
+                                                    <action selector="vegetarianButtonTapped:" destination="6NC-WZ-jZe" eventType="touchUpInside" id="ksR-QM-pXL"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XL7-O1-zcy">
+                                                <rect key="frame" x="195" y="417" width="150" height="100"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="Turkey Button" image="Thanksgiving Dinner" backgroundImage=" "/>
+                                                <connections>
+                                                    <action selector="turkeyButtonTapped:" destination="6NC-WZ-jZe" eventType="touchUpInside" id="d9X-WU-jlk"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="smG-hi-S04">
+                                                <rect key="frame" x="142" y="1358" width="90" height="33"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <state key="normal" title="Submit"/>
+                                                <connections>
+                                                    <action selector="submitButtonTapped:" destination="6NC-WZ-jZe" eventType="touchUpInside" id="c7v-H1-adM"/>
+                                                </connections>
+                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Friday night plans?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vm6-3b-LqN">
+                                                <rect key="frame" x="29" y="527" width="316" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tOA-2Y-9Xx">
+                                                <rect key="frame" x="29" y="556" width="150" height="100"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="Games Button" image="Video Games"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aXl-dv-eST">
+                                                <rect key="frame" x="195" y="556" width="150" height="100"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="Sleep Button" image="Sleep"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DZV-v5-HaG">
+                                                <rect key="frame" x="29" y="673" width="150" height="100"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="Tots Button" image="TOTS Flag"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hQA-Wk-QpC">
+                                                <rect key="frame" x="195" y="673" width="150" height="100"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="Button" image="Streaming Apps"/>
+                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="First luxury item you buy after winning the lottery?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O1L-Q2-1ER">
+                                                <rect key="frame" x="29" y="791" width="316" height="44"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QYI-CP-9JF">
+                                                <rect key="frame" x="29" y="843" width="150" height="100"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="Island Button" image="Island"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="juW-dH-dbr">
+                                                <rect key="frame" x="195" y="843" width="150" height="100"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="Car Button" image="Lamborghini"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W3f-IH-Mux">
+                                                <rect key="frame" x="29" y="958" width="150" height="100"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="Jet Button" image="Jet"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MGm-b8-9ZS">
+                                                <rect key="frame" x="195" y="958" width="150" height="100"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="Mansion Button" image="Mansion"/>
+                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Another Question" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JPQ-KF-oax">
+                                                <rect key="frame" x="29" y="1078" width="316" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FJQ-my-bZ8">
+                                                <rect key="frame" x="29" y="1107" width="150" height="100"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="Button"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ggP-yN-5Yv">
+                                                <rect key="frame" x="195" y="1107" width="150" height="100"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="Button"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z3w-Xy-UTa">
+                                                <rect key="frame" x="29" y="1215" width="150" height="100"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="Button"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8lO-y2-OaT">
+                                                <rect key="frame" x="195" y="1215" width="150" height="100"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="Button"/>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
-                                        <constraints>
-                                            <constraint firstItem="0Uc-A3-9eQ" firstAttribute="leading" secondItem="6rX-Xg-7b6" secondAttribute="trailing" constant="16" id="3Pc-qf-Zez"/>
-                                            <constraint firstItem="KTF-1V-3gG" firstAttribute="top" secondItem="VHg-lm-Dyu" secondAttribute="top" constant="17" id="88g-30-O3x"/>
-                                            <constraint firstItem="6rX-Xg-7b6" firstAttribute="leading" secondItem="VHg-lm-Dyu" secondAttribute="leading" constant="29" id="9GO-zk-AoE"/>
-                                            <constraint firstItem="KTF-1V-3gG" firstAttribute="centerX" secondItem="VHg-lm-Dyu" secondAttribute="centerX" id="Dai-n4-e8o"/>
-                                            <constraint firstItem="d8M-Ng-d0e" firstAttribute="top" secondItem="KTF-1V-3gG" secondAttribute="bottom" constant="8" id="Dcd-ZP-fep"/>
-                                            <constraint firstItem="6rX-Xg-7b6" firstAttribute="top" secondItem="d8M-Ng-d0e" secondAttribute="bottom" constant="15" id="J2h-9O-qmd"/>
-                                            <constraint firstItem="gpD-M7-Pd9" firstAttribute="leading" secondItem="d8M-Ng-d0e" secondAttribute="trailing" constant="16" id="PaM-gH-pit"/>
-                                            <constraint firstAttribute="trailing" secondItem="0Uc-A3-9eQ" secondAttribute="trailing" constant="30" id="YKW-0T-xNO"/>
-                                            <constraint firstItem="KTF-1V-3gG" firstAttribute="leading" secondItem="VHg-lm-Dyu" secondAttribute="leading" constant="29" id="aFO-EW-ym2"/>
-                                            <constraint firstItem="0Uc-A3-9eQ" firstAttribute="leading" secondItem="6rX-Xg-7b6" secondAttribute="trailing" constant="16" id="bgG-Hk-PpK"/>
-                                            <constraint firstItem="d8M-Ng-d0e" firstAttribute="leading" secondItem="VHg-lm-Dyu" secondAttribute="leading" constant="29" id="bh1-Hr-Z5o"/>
-                                            <constraint firstAttribute="trailing" secondItem="gpD-M7-Pd9" secondAttribute="trailing" constant="30" id="fey-sh-mrK"/>
-                                            <constraint firstAttribute="trailing" secondItem="KTF-1V-3gG" secondAttribute="trailing" constant="30" id="hse-GG-qhq"/>
-                                            <constraint firstAttribute="bottom" secondItem="6rX-Xg-7b6" secondAttribute="bottom" constant="639" id="l1Z-33-fAu"/>
-                                            <constraint firstItem="gpD-M7-Pd9" firstAttribute="top" secondItem="KTF-1V-3gG" secondAttribute="bottom" constant="8" id="n0x-oe-QfU"/>
-                                            <constraint firstItem="0Uc-A3-9eQ" firstAttribute="top" secondItem="gpD-M7-Pd9" secondAttribute="bottom" constant="15" id="xuA-Kp-Xvc"/>
-                                        </constraints>
                                     </view>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="VHg-lm-Dyu" firstAttribute="width" secondItem="e4F-Ef-iTq" secondAttribute="width" id="2K4-qu-oSf"/>
-                                    <constraint firstAttribute="bottom" secondItem="VHg-lm-Dyu" secondAttribute="bottom" id="Tq6-XE-91F"/>
-                                    <constraint firstItem="VHg-lm-Dyu" firstAttribute="top" secondItem="e4F-Ef-iTq" secondAttribute="top" id="ac8-P3-mMN"/>
-                                    <constraint firstAttribute="trailing" secondItem="VHg-lm-Dyu" secondAttribute="trailing" id="kdR-B0-0j5"/>
-                                    <constraint firstItem="VHg-lm-Dyu" firstAttribute="leading" secondItem="e4F-Ef-iTq" secondAttribute="leading" id="sIX-Av-5IV"/>
+                                    <constraint firstItem="VHg-lm-Dyu" firstAttribute="leading" secondItem="e4F-Ef-iTq" secondAttribute="leading" id="5KA-Eq-8CO"/>
+                                    <constraint firstItem="VHg-lm-Dyu" firstAttribute="width" secondItem="e4F-Ef-iTq" secondAttribute="width" id="Lkw-GY-k75"/>
+                                    <constraint firstAttribute="bottom" secondItem="VHg-lm-Dyu" secondAttribute="bottom" constant="-346" id="kjr-U5-bqb"/>
+                                    <constraint firstAttribute="trailing" secondItem="VHg-lm-Dyu" secondAttribute="trailing" id="r5R-Ut-LQS"/>
+                                    <constraint firstItem="VHg-lm-Dyu" firstAttribute="top" secondItem="e4F-Ef-iTq" secondAttribute="top" id="uar-x0-dac"/>
                                 </constraints>
                             </scrollView>
                         </subviews>
@@ -961,11 +886,44 @@
                     </view>
                     <connections>
                         <outlet property="beachButton" destination="d8M-Ng-d0e" id="e9s-bY-fvO"/>
+                        <segue destination="bl2-z3-VBG" kind="show" identifier="Show Results" id="j8u-Na-Wxp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MP6-TG-Gef" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3224.8000000000002" y="-1579.1604197901052"/>
+            <point key="canvasLocation" x="3288.8000000000002" y="-2003.7481259370315"/>
+        </scene>
+        <!--House Name-->
+        <scene sceneID="b5P-jf-oa3">
+            <objects>
+                <viewController id="bl2-z3-VBG" customClass="ResultsViewController" customModule="GoT___My_House" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Nb7-0z-VQV">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Congratulations! Your house is ... !" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K4S-VQ-Ahs">
+                                <rect key="frame" x="16" y="101" width="343" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ot1-fH-Lnj">
+                                <rect key="frame" x="67" y="173" width="240" height="292"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                        <viewLayoutGuide key="safeArea" id="TXX-eI-hdO"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="House Name" id="Bym-zP-grW"/>
+                    <connections>
+                        <outlet property="resultsLabel" destination="K4S-VQ-Ahs" id="eBT-rq-Wa9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fQC-oY-ann" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4599" y="-1633"/>
         </scene>
         <!--Placement Quiz-->
         <scene sceneID="zQO-FU-811">
