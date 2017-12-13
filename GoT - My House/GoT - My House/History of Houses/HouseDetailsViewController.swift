@@ -186,12 +186,23 @@ class HouseDetailsViewController: UIViewController {
     }
     
     func getSwornMembers(chars: [String]) -> String {
+        
         var charList = ""
         
         for i in 0 ..< chars.count - 1 {
+            if i > 9 {
+                break
+            }
             charList = charList + findCharacter(charId: chars[i]) + ", "
         }
-        let last = chars.count - 1
+        
+        var last = Int()
+        if chars.count > 9 {
+            last = 10
+        }
+        else {
+            last = chars.count - 1
+        }
         charList = charList + findCharacter(charId: chars[last])
         
         return charList

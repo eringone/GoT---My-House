@@ -8,7 +8,7 @@
 
 import UIKit
 
-class HousesTableViewController: UITableViewController {
+class HousesTableViewController: UITableViewController, UISearchResultsUpdating, UISearchBarDelegate {
     
     // Instance Variables
     var arrayOfHouses = [String]()
@@ -16,6 +16,11 @@ class HousesTableViewController: UITableViewController {
     var selectedHouse = ""
     var selectedArray = [[String]]()
     var wikiURL = ""
+    
+    // These two instance variables are used for Search Bar functionality
+    var searchResults = [String]()
+    var searchResultsArray = [[[String]]]()
+    var searchResultsController = UISearchController()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -124,7 +129,8 @@ class HousesTableViewController: UITableViewController {
                         let houseString = houseName + "|" + houseRegion + "|" + coatOfArms + "|" + words + "|" + "titles" +
                             "|" + "seats" + "|" + currentLord + "|" + heir + "|" + founded + "|" + founder + "|" + "swornMembers"
                         
-                        let houseArray = [titles, seats, swornMembers]
+                        let houseNameArray = [houseName]
+                        let houseArray = [titles, seats, swornMembers, houseNameArray]
                         
                         //************************************************
                         // Add the new house string to the array of houses
@@ -146,11 +152,95 @@ class HousesTableViewController: UITableViewController {
                 showAlertMessage(messageHeader: "JSON Data", messageBody: "Unable to obtain the JSON data file!")
             }
         }
+        
+        createSearchResultsController()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    /*
+     ---------------------------------------------
+     MARK: - Creation of Search Results Controller
+     ---------------------------------------------
+     */
+    func createSearchResultsController() {
+        /*
+         Instantiate a UISearchController object and store its object reference into local variable: controller.
+         Setting the parameter searchResultsController to nil implies that the search results will be displayed
+         in the same view used for searching (under the same UITableViewController object).
+         */
+        let controller = UISearchController(searchResultsController: nil)
+        
+        /*
+         We use the same table view controller (self) to also display the search results. Therefore,
+         set self to be the object responsible for listing and updating the search results.
+         Note that we made self to conform to UISearchResultsUpdating protocol.
+         */
+        controller.searchResultsUpdater = self
+        
+        /*
+         The property dimsBackgroundDuringPresentation determines if the underlying content is dimmed during
+         presentation. We set this property to false since we are presenting the search results in the same
+         view that is used for searching. The "false" option displays the search results without dimming.
+         */
+        controller.dimsBackgroundDuringPresentation = false
+        
+        controller.searchBar.delegate = self
+        controller.searchBar.placeholder = "Search Houses"
+        
+        // Resize the search bar object based on screen size and device orientation.
+        controller.searchBar.sizeToFit()
+        
+        /***************************************************************************
+         No need to create the search bar in the Interface Builder (storyboard file).
+         The statement below creates it at runtime.
+         ***************************************************************************/
+        
+        // Set the tableHeaderView's accessory view displayed above the table view to display the search bar.
+        self.tableView.tableHeaderView = controller.searchBar
+        
+        /*
+         Set self (Table View Controller) define the presentation context so that the Search Bar subview
+         does not show up on top of the view (scene) displayed by a downstream view controller.
+         */
+        self.definesPresentationContext = true
+        
+        /*
+         Set the object reference (controller) of the newly created and dressed up UISearchController
+         object to be the value of the instance variable searchResultsController.
+         */
+        searchResultsController = controller
+    }
+    
+    /*
+     -----------------------------------------------
+     MARK: - UISearchResultsUpdating Protocol Method
+     -----------------------------------------------
+     
+     This UISearchResultsUpdating protocol required method is automatically called whenever the search
+     bar becomes the first responder or changes are made to the text or scope of the search bar.
+     You must perform all required filtering and updating operations inside this method.
+     */
+    func updateSearchResults(for searchController: UISearchController)
+    {
+        // Empty the instance variable searchResults array without keeping its capacity
+        searchResults.removeAll(keepingCapacity: false)
+        
+        // Set searchPredicate to search for any character(s) the user enters into the search bar.
+        // [c] indicates that the search is case insensitive.
+        let searchPredicate = NSPredicate(format: "SELF CONTAINS[c] %@", searchController.searchBar.text!)
+        
+        // Obtain the university names that contain the character(s) the user types into the Search Bar.
+        let listOfHousesFound = (arrayOfHouses as NSArray).filtered(using: searchPredicate)
+        
+        // Obtain the search results as an array of type String
+        searchResults = listOfHousesFound as! [String]
+        
+        // Reload the table view to display the search results
+        self.tableView.reloadData()
     }
     
     /*
@@ -188,7 +278,7 @@ class HousesTableViewController: UITableViewController {
     // Asks the data source to return the number of rows in a section, the number of which is given
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return arrayOfHouses.count
+        return searchResultsController.isActive ? searchResults.count : arrayOfHouses.count
     }
 
     //-------------------------------------
@@ -202,7 +292,7 @@ class HousesTableViewController: UITableViewController {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "HouseCell", for: indexPath) as UITableViewCell
         
-        let houseAtRowNumber = arrayOfHouses[rowNumber]
+        let houseAtRowNumber = searchResultsController.isActive ? searchResults[rowNumber] : arrayOfHouses[rowNumber]
         
         let houseData: [String] = (houseAtRowNumber as AnyObject).components(separatedBy: "|")
         
@@ -232,8 +322,22 @@ class HousesTableViewController: UITableViewController {
     // Tapping a row (movie) displays a map of the city
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        selectedHouse = arrayOfHouses[indexPath.row]
-        selectedArray = arrayOfHousesArray[indexPath.row]
+        selectedHouse = searchResultsController.isActive ? searchResults[(indexPath as NSIndexPath).row] : arrayOfHouses[indexPath.row]
+        
+        if searchResultsController.isActive {
+            let houseData: [String] = (selectedHouse as AnyObject).components(separatedBy: "|")
+            let house = houseData[0]
+            
+            for j in 0 ..< arrayOfHousesArray.count {
+                if arrayOfHousesArray[j][3][0] == house {
+                    selectedArray = arrayOfHousesArray[j]
+                }
+            }
+            
+        }
+        else {
+            selectedArray = arrayOfHousesArray[indexPath.row]
+        }
         
         // Perform the segue named MovieYouTube
         performSegue(withIdentifier: "House Details", sender: self)
