@@ -231,13 +231,22 @@ class HousesTableViewController: UITableViewController, UISearchResultsUpdating,
         
         // Set searchPredicate to search for any character(s) the user enters into the search bar.
         // [c] indicates that the search is case insensitive.
-        let searchPredicate = NSPredicate(format: "SELF CONTAINS[c] %@", searchController.searchBar.text!)
+        //let searchPredicate = NSPredicate(format: "SELF CONTAINS[c] %@", searchController.searchBar.text!)
         
         // Obtain the university names that contain the character(s) the user types into the Search Bar.
-        let listOfHousesFound = (arrayOfHouses as NSArray).filtered(using: searchPredicate)
+        //let listOfHousesFound = (arrayOfHouses as NSArray).filtered(using: searchPredicate)
+        
+        var listOfHousesFound = [String]()
+        let searchPredicate = searchController.searchBar.text!.lowercased()
+        for i in 0 ..< arrayOfHouses.count {
+            let houseData: [String] = (arrayOfHouses[i] as AnyObject).components(separatedBy: "|")
+            if houseData[0].lowercased().contains(searchPredicate) {
+                listOfHousesFound.append(arrayOfHouses[i])
+            }
+        }
         
         // Obtain the search results as an array of type String
-        searchResults = listOfHousesFound as! [String]
+        searchResults = listOfHousesFound
         
         // Reload the table view to display the search results
         self.tableView.reloadData()
