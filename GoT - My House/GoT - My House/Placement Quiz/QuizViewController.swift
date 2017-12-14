@@ -7,6 +7,7 @@
 //
 
 import UIKit
+//import <QuartzCore/QuartzCore.h>
 
 class QuizViewController: UIViewController {
     let applicationDelegate: AppDelegate = UIApplication.shared.delegate as! AppDelegate
@@ -43,11 +44,14 @@ class QuizViewController: UIViewController {
     @IBAction func beachButtonTapped(_ sender: Any) {
         valuesFromAnswers[0] = 1
         print("Targaryen")
+        beachButton.layer.borderWidth = 2
+        beachButton.layer.borderColor = UIColor.red.cgColor
     }
     
     @IBAction func cityButtonTapped(_ sender: UIButton) {
         valuesFromAnswers[0] = 2
         print("Lannister")
+        beachButton.layer.borderWidth = 0
     }
     
     @IBAction func iglooButtonTapped(_ sender: UIButton) {

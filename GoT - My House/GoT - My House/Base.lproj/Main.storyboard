@@ -657,7 +657,6 @@
                         <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="awW-tp-c0F" firstAttribute="centerX" secondItem="es5-5R-m27" secondAttribute="centerX" id="0BJ-qZ-wJy"/>
-                            <constraint firstItem="461-1l-UdR" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="wHt-6a-JtV" secondAttribute="leading" constant="79" id="52n-nC-yU1"/>
                             <constraint firstItem="Y8u-FI-Ovx" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="wHt-6a-JtV" secondAttribute="leading" constant="83" id="668-a1-fdR"/>
                             <constraint firstItem="awW-tp-c0F" firstAttribute="top" secondItem="461-1l-UdR" secondAttribute="bottom" constant="142" id="7hV-jb-JQI"/>
                             <constraint firstItem="461-1l-UdR" firstAttribute="top" secondItem="Y8u-FI-Ovx" secondAttribute="bottom" constant="23" id="DBC-y1-cGK"/>
@@ -669,7 +668,6 @@
                             <constraint firstItem="461-1l-UdR" firstAttribute="centerX" secondItem="es5-5R-m27" secondAttribute="centerX" id="Z80-Q9-tLS"/>
                             <constraint firstItem="Y8u-FI-Ovx" firstAttribute="centerX" secondItem="es5-5R-m27" secondAttribute="centerX" id="aKz-p7-a9V"/>
                             <constraint firstItem="wHt-6a-JtV" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="awW-tp-c0F" secondAttribute="trailing" constant="83" id="eBe-vO-DXX"/>
-                            <constraint firstItem="wHt-6a-JtV" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="461-1l-UdR" secondAttribute="trailing" constant="79" id="fZ0-9m-4v8"/>
                             <constraint firstItem="xBL-u3-RQg" firstAttribute="centerX" secondItem="es5-5R-m27" secondAttribute="centerX" id="iiT-gz-XJ2"/>
                             <constraint firstItem="xBL-u3-RQg" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="wHt-6a-JtV" secondAttribute="leading" constant="136" id="sBu-nN-pmC"/>
                         </constraints>
