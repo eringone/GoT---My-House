@@ -10,11 +10,34 @@ import UIKit
 //import <QuartzCore/QuartzCore.h>
 
 class QuizViewController: UIViewController {
+    
     let applicationDelegate: AppDelegate = UIApplication.shared.delegate as! AppDelegate
-    var checkmarkImage: UIImageView!
     
     @IBOutlet var beachButton: UIButton!
-    //@IBOutlet var checkmarkImage: UIImageView!
+    @IBOutlet var iglooButton: UIButton!
+    @IBOutlet var forestButton: UIButton!
+    @IBOutlet var cityButton: UIButton!
+    
+    @IBOutlet var burgerButton: UIButton!
+    @IBOutlet var seafoodButton: UIButton!
+    @IBOutlet var vegetarianButton: UIButton!
+    @IBOutlet var turkeyButton: UIButton!
+    
+    @IBOutlet var gamesButton: UIButton!
+    @IBOutlet var sleepButton: UIButton!
+    @IBOutlet var totsButton: UIButton!
+    @IBOutlet var appsButton: UIButton!
+    
+    @IBOutlet var islandButton: UIButton!
+    @IBOutlet var carButton: UIButton!
+    @IBOutlet var jetButton: UIButton!
+    @IBOutlet var mansionButton: UIButton!
+    
+    @IBOutlet var hunterButton: UIButton!
+    @IBOutlet var dragonButton: UIButton!
+    @IBOutlet var ursulaButton: UIButton!
+    @IBOutlet var lionButton: UIButton!
+
     var valuesFromAnswers = [Int](repeating: 0, count: 5) // = [0, 0, 0, 0, 0]
     /*
      Values will be evaluated at the end of the quiz
@@ -44,25 +67,40 @@ class QuizViewController: UIViewController {
     @IBAction func beachButtonTapped(_ sender: Any) {
         valuesFromAnswers[0] = 1
         print("Targaryen")
+        
         beachButton.layer.borderWidth = 2
         beachButton.layer.borderColor = UIColor.red.cgColor
+        resetSelection(button1: cityButton, button2: iglooButton, button3: forestButton)
     }
     
     @IBAction func cityButtonTapped(_ sender: UIButton) {
         valuesFromAnswers[0] = 2
         print("Lannister")
-        beachButton.layer.borderWidth = 0
+        
+        cityButton.layer.borderWidth = 2
+        cityButton.layer.borderColor = UIColor.red.cgColor
+        resetSelection(button1: beachButton, button2: iglooButton, button3: forestButton)
     }
     
     @IBAction func iglooButtonTapped(_ sender: UIButton) {
         valuesFromAnswers[0] = 3
         print("Stark")
+        
+        iglooButton.layer.borderWidth = 2
+        iglooButton.layer.borderColor = UIColor.red.cgColor
+        resetSelection(button1: beachButton, button2: cityButton, button3: forestButton)
     }
     
     @IBAction func forestButtonTapped(_ sender: UIButton) {
         valuesFromAnswers[0] = 4
         print("Baratheon")
+        
+        forestButton.layer.borderWidth = 2
+        forestButton.layer.borderColor = UIColor.red.cgColor
+        resetSelection(button1: beachButton, button2: iglooButton, button3: cityButton)
     }
+    
+    
     
     /* ----------------------- End Q1 ---------------------------- */
     
@@ -74,21 +112,37 @@ class QuizViewController: UIViewController {
     @IBAction func seafoodButtonTapped(_ sender: UIButton) {
         valuesFromAnswers[1] = 1
         print("Targaryen")
+        
+        seafoodButton.layer.borderWidth = 2
+        seafoodButton.layer.borderColor = UIColor.red.cgColor
+        resetSelection(button1: burgerButton, button2: vegetarianButton, button3: turkeyButton)
     }
     
-    @IBAction func burgerButtonTapped(_ sender: UIButton) {
+    @IBAction func vegetarianButtonTapped(_ sender: UIButton) {
         valuesFromAnswers[1] = 2
-        print("Lannister")
+        print("Baratheon")
+        
+        vegetarianButton.layer.borderWidth = 2
+        vegetarianButton.layer.borderColor = UIColor.red.cgColor
+        resetSelection(button1: seafoodButton, button2: burgerButton, button3: turkeyButton)
     }
     
     @IBAction func turkeyButtonTapped(_ sender: UIButton) {
         valuesFromAnswers[1] = 3
         print("Stark")
+        
+        turkeyButton.layer.borderWidth = 2
+        turkeyButton.layer.borderColor = UIColor.red.cgColor
+        resetSelection(button1: seafoodButton, button2: vegetarianButton, button3: burgerButton)
     }
-
-    @IBAction func vegetarianButtonTapped(_ sender: UIButton) {
+    
+    @IBAction func burgerButtonTapped(_ sender: UIButton) {
         valuesFromAnswers[1] = 4
-        print("Baratheon")
+        print("Lannister")
+        
+        burgerButton.layer.borderWidth = 2
+        burgerButton.layer.borderColor = UIColor.red.cgColor
+        resetSelection(button1: seafoodButton, button2: vegetarianButton, button3: turkeyButton)
     }
     
     /* ----------------------- End Q2 ---------------------------- */
@@ -101,23 +155,38 @@ class QuizViewController: UIViewController {
     @IBAction func sleepButtonTapped(_ sender: UIButton) {
         valuesFromAnswers[2] = 1
         print("Targaryen")
-
+        
+        sleepButton.layer.borderWidth = 2
+        sleepButton.layer.borderColor = UIColor.red.cgColor
+        resetSelection(button1: totsButton, button2: appsButton, button3: gamesButton)
     }
     
     @IBAction func totsButtonTapped(_ sender: UIButton) {
         valuesFromAnswers[2] = 2
         print("Lannister")
+        
+        totsButton.layer.borderWidth = 2
+        totsButton.layer.borderColor = UIColor.red.cgColor
+        resetSelection(button1: sleepButton, button2: appsButton, button3: gamesButton)
     }
   
     
     @IBAction func appsButtonTapped(_ sender: UIButton) {
         valuesFromAnswers[2] = 3
         print("Stark")
+        
+        appsButton.layer.borderWidth = 2
+        appsButton.layer.borderColor = UIColor.red.cgColor
+        resetSelection(button1: totsButton, button2: sleepButton, button3: gamesButton)
     }
     
     @IBAction func gamesButtonTapped(_ sender: UIButton) {
         valuesFromAnswers[2] = 4
         print("Baratheon")
+        
+        gamesButton.layer.borderWidth = 2
+        gamesButton.layer.borderColor = UIColor.red.cgColor
+        resetSelection(button1: totsButton, button2: appsButton, button3: sleepButton)
     }
     /* ----------------------- End Q3 ---------------------------- */
     
@@ -130,21 +199,36 @@ class QuizViewController: UIViewController {
         valuesFromAnswers[3] = 1
         print("Targaryen")
 
+        islandButton.layer.borderWidth = 2
+        islandButton.layer.borderColor = UIColor.red.cgColor
+        resetSelection(button1: mansionButton, button2: jetButton, button3: carButton)
     }
     
     @IBAction func mansionButtonTapped(_ sender: UIButton) {
         valuesFromAnswers[3] = 2
         print("Lannister")
+        
+        mansionButton.layer.borderWidth = 2
+        mansionButton.layer.borderColor = UIColor.red.cgColor
+        resetSelection(button1: islandButton, button2: jetButton, button3: carButton)
     }
     
     @IBAction func jetButtonTapped(_ sender: UIButton) {
         valuesFromAnswers[3] = 3
         print("Stark")
+        
+        jetButton.layer.borderWidth = 2
+        jetButton.layer.borderColor = UIColor.red.cgColor
+        resetSelection(button1: mansionButton, button2: islandButton, button3: carButton)
     }
     
     @IBAction func carButtonTapped(_ sender: UIButton) {
         valuesFromAnswers[3] = 4
         print("Baratheon")
+        
+        carButton.layer.borderWidth = 2
+        carButton.layer.borderColor = UIColor.red.cgColor
+        resetSelection(button1: mansionButton, button2: jetButton, button3: islandButton)
     }
     /* ----------------------- End Q4 ---------------------------- */
     
@@ -156,46 +240,52 @@ class QuizViewController: UIViewController {
     @IBAction func dragonButtonTapped(_ sender: UIButton) {
         valuesFromAnswers[4] = 1
         print("Targaryen")
+        
+        dragonButton.layer.borderWidth = 2
+        dragonButton.layer.borderColor = UIColor.red.cgColor
+        resetSelection(button1: lionButton, button2: ursulaButton, button3: hunterButton)
     }
     
     @IBAction func lionButtonTapped(_ sender: UIButton) {
         valuesFromAnswers[4] = 2
         print("Lannister")
+        
+        lionButton.layer.borderWidth = 2
+        lionButton.layer.borderColor = UIColor.red.cgColor
+        resetSelection(button1: dragonButton, button2: ursulaButton, button3: hunterButton)
     }
     
     @IBAction func ursulaButtonTapped(_ sender: UIButton) {
         valuesFromAnswers[4] = 3
         print("Stark")
+        
+        ursulaButton.layer.borderWidth = 2
+        ursulaButton.layer.borderColor = UIColor.red.cgColor
+        resetSelection(button1: lionButton, button2: dragonButton, button3: hunterButton)
     }
     
     @IBAction func hunterButtonTapped(_ sender: UIButton) {
         valuesFromAnswers[4] = 4
         print("Baratheon")
+        
+        hunterButton.layer.borderWidth = 2
+        hunterButton.layer.borderColor = UIColor.red.cgColor
+        resetSelection(button1: lionButton, button2: ursulaButton, button3: dragonButton)
     }
     
     /* ----------------------- End Q5 ---------------------------- */
     
-    @IBAction func submitButtonTapped(_ sender: UIButton) {
-        applicationDelegate.userData[0] = "Saved"
-        
-        let countedSet = NSCountedSet(array: valuesFromAnswers)
-        let mostFrequent = countedSet.max { countedSet.count(for: $0) < countedSet.count(for: $1) } as! Int
-        if mostFrequent == 1 {
-            applicationDelegate.userData[1] = "Targaryen"
-        }
-        else if mostFrequent == 2 {
-            applicationDelegate.userData[1] = "Lannister"
-        }
-        else if mostFrequent == 3 {
-            applicationDelegate.userData[1] = "Stark"
-        }
-        else if mostFrequent == 4 {
-            applicationDelegate.userData[1] = "Baratheon"
-        }
-        // most likely add the sigil png to the plist
-        
-        //performSegue(withIdentifier: "Show Results", sender: self)
+    /*
+     -----------------------------
+     MARK: - Remove any red borders, if user has changed their answer
+     -----------------------------
+     */
+    func resetSelection(button1: UIButton, button2: UIButton, button3: UIButton) {
+        button1.layer.borderWidth = 0
+        button2.layer.borderWidth = 0
+        button3.layer.borderWidth = 0
     }
+    
     
     /*
     // MARK: - Navigation

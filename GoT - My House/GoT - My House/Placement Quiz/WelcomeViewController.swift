@@ -44,10 +44,33 @@ class WelcomeViewController: UIViewController {
     @IBAction func unwindToWelcomeViewController (segue : UIStoryboardSegue) {
 
         if segue.identifier == "Save User Data" {
+            
+            applicationDelegate.userData[0] = "Saved"
+            let quizViewController : QuizViewController = segue.source as! QuizViewController
+            let countedSet = NSCountedSet(array: quizViewController.valuesFromAnswers)
+            let mostFrequent = countedSet.max { countedSet.count(for: $0) < countedSet.count(for: $1) } as! Int
+            if mostFrequent == 1 {
+                applicationDelegate.userData[1] = "Targaryen"
+            }
+            else if mostFrequent == 2 {
+                applicationDelegate.userData[1] = "Lannister"
+            }
+            else if mostFrequent == 3 {
+                applicationDelegate.userData[1] = "Stark"
+            }
+            else if mostFrequent == 4 {
+                applicationDelegate.userData[1] = "Baratheon"
+            }
+            
             loadUserData()
         }
     }
     
+    /*
+     ---------------------------
+     MARK: - Load all user's data if they have already taken the quiz at least once
+     ---------------------------
+     */
     func loadUserData() {
         let houseName: String = applicationDelegate.userData[1] as! String
         if houseName == "" {
@@ -55,7 +78,7 @@ class WelcomeViewController: UIViewController {
             return
         }
         
-        mainLabel.text! = "Congratulations! Your house is " + houseName + "!"
+        mainLabel.text! = "Congratulations! You are a member of house " + houseName + "!"
         var houseWords = ""
         switch houseName {
         case "Targaryen" :
@@ -69,30 +92,23 @@ class WelcomeViewController: UIViewController {
         default :
             houseWords = "No house words to be found"
         }
-        
-        sigilImageView.image = UIImage(named: houseName + " Sigil.png")
-        startJourneyLabel.text! = "Enjoy your journey and always remember your words '" + houseWords + "'"
+        applicationDelegate.userData[2] = houseName + " Sigil.png"
+
+        sigilImageView.image = UIImage(named: applicationDelegate.userData[2] as! String)
+        startJourneyLabel.text! = "Enjoy your journey and always remember your house words '" + houseWords + "'"
         quizButton.setTitle("Retake Quiz", for: .normal)
+        
     }
     
-    /*
-     -------------------------
-     MARK: - Add Corporation Method
-     -------------------------
-     */
-    @objc func addCorporation(_ sender: AnyObject) {
-        performSegue(withIdentifier: "Add New Corporation", sender: self)
-    }
-    
+  
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         if segue.identifier == "Take Quiz" {
-            // do nothing 
+            // do nothing but show
         }
-        
     }
     
     /*
