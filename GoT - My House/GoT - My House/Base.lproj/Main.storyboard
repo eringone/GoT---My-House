@@ -1067,7 +1067,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="82d-5r-0n6" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="pIP-Zq-mCA" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="4271" y="-1579"/>
+            <point key="canvasLocation" x="3294" y="-1579"/>
         </scene>
         <!--Placement Quiz-->
         <scene sceneID="zQO-FU-811">
