@@ -14,7 +14,7 @@ class QuizViewController: UIViewController {
     
     @IBOutlet var beachButton: UIButton!
     //@IBOutlet var checkmarkImage: UIImageView!
-    var valuesFromAnswers : [Int] = [0, 0] //, 0, 0, 0, 0]
+    var valuesFromAnswers = [Int](repeating: 0, count: 5) // = [0, 0, 0, 0, 0]
     /*
      Values will be evaluated at the end of the quiz
      1 = Targaryen
@@ -23,7 +23,7 @@ class QuizViewController: UIViewController {
      4 = Baratheon
      value with the most duplicates will decide house
      */
-    var nameToPass = String()
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -40,7 +40,6 @@ class QuizViewController: UIViewController {
      MARK: - Question 1 Button Tapped Handlers
      -----------------------------
      */
-    /* ----------------------- Start ---------------------------- */
     @IBAction func beachButtonTapped(_ sender: Any) {
         valuesFromAnswers[0] = 1
         print("Targaryen")
@@ -61,15 +60,13 @@ class QuizViewController: UIViewController {
         print("Baratheon")
     }
     
-    /* ----------------------- End ---------------------------- */
+    /* ----------------------- End Q1 ---------------------------- */
     
     /*
      -----------------------------
      MARK: - Question 2 Button Tapped Handlers
      -----------------------------
      */
-    /* ----------------------- Start ---------------------------- */
-    
     @IBAction func seafoodButtonTapped(_ sender: UIButton) {
         valuesFromAnswers[1] = 1
         print("Targaryen")
@@ -85,18 +82,95 @@ class QuizViewController: UIViewController {
         print("Stark")
     }
 
-    
     @IBAction func vegetarianButtonTapped(_ sender: UIButton) {
         valuesFromAnswers[1] = 4
         print("Baratheon")
     }
     
+    /* ----------------------- End Q2 ---------------------------- */
     
-    /* ----------------------- End ---------------------------- */
-    
-    
-    
+    /*
+     -----------------------------
+     MARK: - Question 3 Button Tapped Handlers
+     -----------------------------
+     */
+    @IBAction func sleepButtonTapped(_ sender: UIButton) {
+        valuesFromAnswers[2] = 1
+        print("Targaryen")
 
+    }
+    
+    @IBAction func totsButtonTapped(_ sender: UIButton) {
+        valuesFromAnswers[2] = 2
+        print("Lannister")
+    }
+  
+    
+    @IBAction func appsButtonTapped(_ sender: UIButton) {
+        valuesFromAnswers[2] = 3
+        print("Stark")
+    }
+    
+    @IBAction func gamesButtonTapped(_ sender: UIButton) {
+        valuesFromAnswers[2] = 4
+        print("Baratheon")
+    }
+    /* ----------------------- End Q3 ---------------------------- */
+    
+    /*
+     -----------------------------
+     MARK: - Question 4 Button Tapped Handlers
+     -----------------------------
+     */
+    @IBAction func islandButtonTapped(_ sender: UIButton) {
+        valuesFromAnswers[3] = 1
+        print("Targaryen")
+
+    }
+    
+    @IBAction func mansionButtonTapped(_ sender: UIButton) {
+        valuesFromAnswers[3] = 2
+        print("Lannister")
+    }
+    
+    @IBAction func jetButtonTapped(_ sender: UIButton) {
+        valuesFromAnswers[3] = 3
+        print("Stark")
+    }
+    
+    @IBAction func carButtonTapped(_ sender: UIButton) {
+        valuesFromAnswers[3] = 4
+        print("Baratheon")
+    }
+    /* ----------------------- End Q4 ---------------------------- */
+    
+    /*
+     -----------------------------
+     MARK: - Question 5 Button Tapped Handlers
+     -----------------------------
+     */
+    @IBAction func dragonButtonTapped(_ sender: UIButton) {
+        valuesFromAnswers[4] = 1
+        print("Targaryen")
+    }
+    
+    @IBAction func lionButtonTapped(_ sender: UIButton) {
+        valuesFromAnswers[4] = 2
+        print("Lannister")
+    }
+    
+    @IBAction func ursulaButtonTapped(_ sender: UIButton) {
+        valuesFromAnswers[4] = 3
+        print("Stark")
+    }
+    
+    @IBAction func hunterButtonTapped(_ sender: UIButton) {
+        valuesFromAnswers[4] = 4
+        print("Baratheon")
+    }
+    
+    /* ----------------------- End Q5 ---------------------------- */
+    
     @IBAction func submitButtonTapped(_ sender: UIButton) {
         applicationDelegate.userData[0] = "Saved"
         
@@ -114,23 +188,20 @@ class QuizViewController: UIViewController {
         else if mostFrequent == 4 {
             applicationDelegate.userData[1] = "Baratheon"
         }
+        // most likely add the sigil png to the plist
         
-        nameToPass = applicationDelegate.userData[1] as! String
-        performSegue(withIdentifier: "Show Results", sender: self)
+        //performSegue(withIdentifier: "Show Results", sender: self)
     }
     
-    
+    /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
-        if segue.identifier == "Show Results" {
-            let resultsVC: ResultsViewController = segue.destination as! ResultsViewController
-            resultsVC.houseNamePassed = nameToPass
-        }
+        
     }
-    
+    */
 
 }

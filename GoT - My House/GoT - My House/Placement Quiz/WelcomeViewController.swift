@@ -9,12 +9,21 @@
 import UIKit
 
 class WelcomeViewController: UIViewController {
+    
+    let applicationDelegate: AppDelegate = UIApplication.shared.delegate as! AppDelegate
+    
     @IBOutlet var quizButton: UIButton!
+    @IBOutlet var mainLabel: UILabel!
+    @IBOutlet var startJourneyLabel: UILabel!
+    @IBOutlet var sigilImageView: UIImageView!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        if applicationDelegate.userData[0] as! String == "Saved" {
+            loadUserData()
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -27,76 +36,44 @@ class WelcomeViewController: UIViewController {
         performSegue(withIdentifier: "Take Quiz", sender: self)
     }
     
-//    /*
-//     ---------------------------
-//     MARK: - Unwind Segue Method
-//     ---------------------------
-//     */
-//    @IBAction func unwindToCorporationsILikeTableViewController (segue : UIStoryboardSegue) {
-//
-//        if segue.identifier == "AddCorp-Save" {
-//
-//            // Obtain the object reference of the source view controller
-//            let addCorpViewController: AddCorporationViewController = segue.source as! AddCorporationViewController
-//
-//            let corpSymbolEntered: String = addCorpViewController.corpSymbolTextField.text!
-//
-//
-//            // Input Data Validation
-//            if corpSymbolEntered.isEmpty {
-//                showAlertMessage(messageHeader: "No Stock Symbol Entered!", messageBody: "Please enter a Stock Symbol!")
-//                return
-//            }
-//
-//            // Remove the first and last spaces from the entered values
-//            var newCorpSymbol = corpSymbolEntered.trimmingCharacters(in: .whitespacesAndNewlines)
-//
-//            let apiUrl = "https://api.iextrading.com/1.0/stock/\(newCorpSymbol)/company"
-//            let logoUrl = "https://storage.googleapis.com/iex/api/logos/\(newCorpSymbol).png"
-//
-//            let url = URL(string: apiUrl)
-//            let getLogoUrl = URL(string: logoUrl)
-//            var jsonData : Data?
-//            var logoData : Data?
-//
-//            do {
-//                jsonData = try Data(contentsOf: url!, options: NSData.ReadingOptions.mappedIfSafe)
-//                logoData = try Data(contentsOf: getLogoUrl!, options: NSData.ReadingOptions.mappedIfSafe)
-//            }
-//            catch {
-//                showAlertMessage(messageHeader: "Symbol Unrecognized!", messageBody: "No corporation found for the stock symbol \(newCorpSymbol) !")
-//                return
-//            }
-//
-//
-//            if let validjsonData = jsonData {
-//
-//                let jsonDict : NSDictionary = try! JSONSerialization.jsonObject(with: validjsonData, options: JSONSerialization.ReadingOptions.mutableContainers) as! NSDictionary
-//                if let symbol = jsonDict["symbol"] as? String {
-//                    newCorpSymbol = symbol
-//                }
-//                if let companyName = jsonDict["companyName"] as? String {
-//                    corpDataToAdd[0] = companyName
-//                }
-//                if let description = jsonDict["description"] as? String {
-//                    corpDataToAdd[1] = description
-//                }
-//                if let website = jsonDict["website"] as? String {
-//                    corpDataToAdd[3] = website
-//                }
-//                if let exchange = jsonDict["exchange"] as? String {
-//                    corpDataToAdd[4] = exchange
-//                }
-//            }
-//            corpDataToAdd[2] = logoUrl
-//            applicationDelegate.dict_Symbol_Corp.setValue(corpDataToAdd, forKey: newCorpSymbol)
-//            corpSymbols = applicationDelegate.dict_Symbol_Corp.allKeys as! [String]
-//            corpSymbols.sort { $0 < $1 }
-//            // Reload
-//            self.tableView.reloadData()
-//        }
-//
-//    }
+    /*
+     ---------------------------
+     MARK: - Unwind Segue Method
+     ---------------------------
+     */
+    @IBAction func unwindToWelcomeViewController (segue : UIStoryboardSegue) {
+
+        if segue.identifier == "Save User Data" {
+            loadUserData()
+        }
+    }
+    
+    func loadUserData() {
+        let houseName: String = applicationDelegate.userData[1] as! String
+        if houseName == "" {
+            showAlertMessage(messageHeader: "No House Name Found!", messageBody: "Please retake quiz!")
+            return
+        }
+        
+        mainLabel.text! = "Congratulations! Your house is " + houseName + "!"
+        var houseWords = ""
+        switch houseName {
+        case "Targaryen" :
+            houseWords = "Fire and Blood"
+        case "Lannister" :
+            houseWords = "Hear me Roar!"
+        case "Stark" :
+            houseWords = "Winter is Coming"
+        case "Baratheon" :
+            houseWords = "Ours is the Fury"
+        default :
+            houseWords = "No house words to be found"
+        }
+        
+        sigilImageView.image = UIImage(named: houseName + " Sigil.png")
+        startJourneyLabel.text! = "Enjoy your journey and always remember your words '" + houseWords + "'"
+        quizButton.setTitle("Retake Quiz", for: .normal)
+    }
     
     /*
      -------------------------
@@ -113,7 +90,7 @@ class WelcomeViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         if segue.identifier == "Take Quiz" {
-            // let quizVC : QuizViewController = segue.destination as! QuizViewController
+            // do nothing 
         }
         
     }
