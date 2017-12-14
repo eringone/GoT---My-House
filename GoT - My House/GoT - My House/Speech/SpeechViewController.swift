@@ -80,7 +80,7 @@ class SpeechViewController: UIViewController, SFSpeechRecognizerDelegate, UIPick
             stopNowPlayingAnimation()
             
             microphoneButton.setTitle("Start Recording", for: .normal)
-            print(resultSpeech)
+            //print(resultSpeech)
             if self.resultSpeech.lowercased() == "give me a quote" {
                 performSegue(withIdentifier: "SpeechResults", sender: self)
             }
@@ -246,7 +246,7 @@ class SpeechViewController: UIViewController, SFSpeechRecognizerDelegate, UIPick
             
             // Obtain the object reference of the destination view controller
             let speechResultViewController: SpeechResultViewController = segue.destination as! SpeechResultViewController
-            print(charPicked)
+            //print(charPicked)
             // Pass the data object to the destination view controller
             speechResultViewController.charPicked = charPicked
         }

@@ -60,8 +60,6 @@ class HousesTableViewController: UITableViewController, UISearchResultsUpdating,
                      */
                     let jsonDataDictionary = try JSONSerialization.jsonObject(with: jsonDataFromApiUrl, options: JSONSerialization.ReadingOptions.mutableContainers) as! Array<AnyObject>
                     
-                    //print(jsonDataDictionary[0])
-                    
                     for index in 0 ..< jsonDataDictionary.count {
                         
                         // Typecast the returned NSDictionary as Dictionary<String, AnyObject>
@@ -355,11 +353,14 @@ class HousesTableViewController: UITableViewController, UISearchResultsUpdating,
     // This is the method invoked when the user taps the Detail Disclosure button (circle icon with i)
     override func tableView(_ tableView: UITableView, accessoryButtonTappedForRowWith indexPath: IndexPath) {
         
+        let houseChosen = searchResultsController.isActive ? searchResults[(indexPath as NSIndexPath).row] : arrayOfHouses[indexPath.row]
+        
         // Obtain the youtube key of the movie whose Detail Disclosure button is tapped
-        let houseData: [String] = (arrayOfHouses[indexPath.row] as AnyObject).components(separatedBy: "|")
-        var house = houseData[0]
-        house = house.replacingOccurrences(of: " ", with: "_")
-        wikiURL = "http://awoiaf.westeros.org/index.php/" + house
+        let houseData: [String] = (houseChosen as AnyObject).components(separatedBy: "|")
+        let house: [String] = (houseData[0] as AnyObject).components(separatedBy: " ")
+        
+        let houseName = house[0] + "_" + house[1]
+        wikiURL = "http://awoiaf.westeros.org/index.php/" + houseName
         
         // Perform the segue named SearchedMovieYouTube
         performSegue(withIdentifier: "House Wiki", sender: self)
