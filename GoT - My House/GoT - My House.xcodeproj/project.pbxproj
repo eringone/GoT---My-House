@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		969436C01FE2F22B000F1CF7 /* ARViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 969436BF1FE2F22B000F1CF7 /* ARViewController.swift */; };
+		969436C21FE302D1000F1CF7 /* ARDisplayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 969436C11FE302D1000F1CF7 /* ARDisplayViewController.swift */; };
 		9F172CFB1FD09CF500ED5069 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F172CFA1FD09CF500ED5069 /* AppDelegate.swift */; };
 		9F172D021FD09CF500ED5069 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F172D001FD09CF500ED5069 /* Main.storyboard */; };
 		9F172D041FD09CF500ED5069 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F172D031FD09CF500ED5069 /* Assets.xcassets */; };
@@ -25,6 +27,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		969436BF1FE2F22B000F1CF7 /* ARViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARViewController.swift; sourceTree = "<group>"; };
+		969436C11FE302D1000F1CF7 /* ARDisplayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARDisplayViewController.swift; sourceTree = "<group>"; };
 		9F172CF71FD09CF500ED5069 /* GoT - My House.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GoT - My House.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F172CFA1FD09CF500ED5069 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9F172D011FD09CF500ED5069 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -57,6 +61,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		969436BE1FE2F214000F1CF7 /* AR */ = {
+			isa = PBXGroup;
+			children = (
+				969436BF1FE2F22B000F1CF7 /* ARViewController.swift */,
+				969436C11FE302D1000F1CF7 /* ARDisplayViewController.swift */,
+			);
+			path = AR;
+			sourceTree = "<group>";
+		};
 		9F172CEE1FD09CF500ED5069 = {
 			isa = PBXGroup;
 			children = (
@@ -77,6 +90,7 @@
 		9F172CF91FD09CF500ED5069 /* GoT - My House */ = {
 			isa = PBXGroup;
 			children = (
+				969436BE1FE2F214000F1CF7 /* AR */,
 				B7D6DE921FDCC0A9007BD359 /* Placement Quiz */,
 				9F172D111FD09D5F00ED5069 /* Speech */,
 				9FFD22DC1FD0C73A0060A8AA /* History of Houses */,
@@ -201,6 +215,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				969436C21FE302D1000F1CF7 /* ARDisplayViewController.swift in Sources */,
 				B7D6DE961FDCC663007BD359 /* WelcomeViewController.swift in Sources */,
 				9FFD22E21FD0C7AD0060A8AA /* HouseWikiViewController.swift in Sources */,
 				9F172D171FD09DBF00ED5069 /* NowPlayingAnimation.swift in Sources */,
@@ -210,6 +225,7 @@
 				9FFD22DE1FD0C7820060A8AA /* HousesTableViewController.swift in Sources */,
 				9F172CFB1FD09CF500ED5069 /* AppDelegate.swift in Sources */,
 				9F172D151FD09DA200ED5069 /* SpeechResultViewController.swift in Sources */,
+				969436C01FE2F22B000F1CF7 /* ARViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
