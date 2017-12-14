@@ -678,7 +678,6 @@
                     <navigationItem key="navigationItem" title="My House" id="ZzH-7Y-996"/>
                     <connections>
                         <outlet property="mainLabel" destination="Y8u-FI-Ovx" id="vNa-eo-Ibc"/>
-                        <outlet property="retakeQuizLabel" destination="awW-tp-c0F" id="18W-a9-hAm"/>
                         <outlet property="sigilImageView" destination="HBo-hW-Sz6" id="bKZ-fO-h1V"/>
                         <outlet property="startJourneyLabel" destination="461-1l-UdR" id="H9i-82-Jgc"/>
                         <segue destination="6NC-WZ-jZe" kind="show" identifier="Take Quiz" id="5j5-kU-42N"/>
