@@ -17,7 +17,6 @@ class SpeechViewController: UIViewController, SFSpeechRecognizerDelegate, UIPick
     @IBOutlet var pickerView: UIPickerView!
     
     let speechRecognizer = SFSpeechRecognizer(locale: Locale.init(identifier: "en-US"))
-    
     var recognitionRequest: SFSpeechAudioBufferRecognitionRequest?
     var recognitionTask: SFSpeechRecognitionTask?
     let audioEngine = AVAudioEngine()
@@ -135,12 +134,6 @@ class SpeechViewController: UIViewController, SFSpeechRecognizerDelegate, UIPick
             if result != nil {
                 
                 self.resultSpeech = (result?.bestTranscription.formattedString)!
-                //                if self.resultSpeech == "Give me a quote from Game of Thrones" {
-                //                    self.textView.text = "HI"
-                //                }
-                //                else {
-                //                    self.textView.text = "I couldn't understand what you said. Can you please say it again."
-                //                }
                 isFinal = (result?.isFinal)!
             }
             
