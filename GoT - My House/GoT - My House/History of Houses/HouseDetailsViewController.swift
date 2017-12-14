@@ -62,7 +62,7 @@ class HouseDetailsViewController: UIViewController {
         }
         
         // Titles
-        if selectedArray[0][0] == "" {
+        if selectedArray[0].isEmpty || selectedArray[0][0] == "" {
             titles.text = "N/A"
         }
         else {
@@ -76,7 +76,7 @@ class HouseDetailsViewController: UIViewController {
         }
         
         // Seats
-        if selectedArray[1][0] == "" {
+        if selectedArray[1].isEmpty || selectedArray[1][0] == "" {
             seats.text = "N/A"
         }
         else {
@@ -122,7 +122,7 @@ class HouseDetailsViewController: UIViewController {
         }
         
         // Sworn Members
-        if selectedArray[2][0] == "" {
+        if selectedArray[2].isEmpty || selectedArray[2][0] == "" {
             swornMembers.text = "N/A"
         }
         else {
