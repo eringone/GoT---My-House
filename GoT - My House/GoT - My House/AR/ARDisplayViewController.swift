@@ -10,10 +10,12 @@ import UIKit
 import ARKit
 import SceneKit
 
-class ARDisplayViewController: UIViewController {
+class ARDisplayViewController: UIViewController, ARSCNViewDelegate {
     
     var houseDataPassed: String = ""
     var imageName: String = ""
+    var imageTag: String = ""
+    var sigil: SCNNode!
 
     @IBOutlet var arsceneView: ARSCNView!
     @IBOutlet var titleNavItem: UINavigationItem!
@@ -25,33 +27,66 @@ class ARDisplayViewController: UIViewController {
         switch houseDataPassed {
         case "Stark":
             titleNavItem.title = "House Stark"
-           imageName = "starkSigl"
+            imageName = "starksig1"
+            imageTag = "stark"
         case "Lannister":
             titleNavItem.title = "House Lannister"
-          imageName = "lannSigil"
+            imageName = "lansig1"
+            imageTag = "lan"
         case "Baratheon":
             titleNavItem.title = "House Baratheon"
-            imageName = "baratSigil"
+            imageName = "barsig1"
+            imageTag = "bar"
         default:
             titleNavItem.title = "House Targaryen"
-            imageName = "tarSigil"
+            imageName = "tarsig1"
+            imageTag = "tar"
         }
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        
+        //Set up AR scene
+        arsceneView.delegate = self
+        arsceneView.showsStatistics = true
+        let scene = SCNScene()
+        
+        /* Place AR into scene */
+        
+        if sigil == nil {
+            if let GOTScene = SCNScene(named: "art.scnassets/\(imageName).dae") {
+                sigil = GOTScene.rootNode.childNode(withName: "\(imageTag)", recursively: true)
+                sigil.position = SCNVector3Make(0, 0, -0.5)
+                //direwolf.movabilityHint = .movable
+                scene.rootNode.addChildNode(sigil!)
+            }
+        }
+        
+        arsceneView.scene = scene
     }
     
-
     /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+     ---------------------------------------
+     MARK: - AR Scene Configuration
+     ---------------------------------------
+     */
+    
+    /*
+     * Configure scene for AR
+     */
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        // Create a session configuration
+        let configuration = ARWorldTrackingConfiguration()
+        configuration.planeDetection = .horizontal
+        // Run the view's session
+        arsceneView.session.run(configuration)
     }
-    */
+    
+    /*
+     * When view is hindered, pause AR scene
+     */
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        // Pause the view's session
+        arsceneView.session.pause()
+    }
 
 }
