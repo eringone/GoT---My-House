@@ -68,8 +68,8 @@ class QuizViewController: UIViewController {
         valuesFromAnswers[0] = 1
         print("Targaryen")
         
-        beachButton.layer.borderWidth = 2
-        beachButton.layer.borderColor = UIColor.red.cgColor
+        beachButton.layer.borderWidth = 4
+        beachButton.layer.borderColor = UIColor.blue.cgColor
         resetSelection(button1: cityButton, button2: iglooButton, button3: forestButton)
     }
     
@@ -77,8 +77,8 @@ class QuizViewController: UIViewController {
         valuesFromAnswers[0] = 2
         print("Lannister")
         
-        cityButton.layer.borderWidth = 2
-        cityButton.layer.borderColor = UIColor.red.cgColor
+        cityButton.layer.borderWidth = 4
+        cityButton.layer.borderColor = UIColor.blue.cgColor
         resetSelection(button1: beachButton, button2: iglooButton, button3: forestButton)
     }
     
@@ -86,8 +86,8 @@ class QuizViewController: UIViewController {
         valuesFromAnswers[0] = 3
         print("Stark")
         
-        iglooButton.layer.borderWidth = 2
-        iglooButton.layer.borderColor = UIColor.red.cgColor
+        iglooButton.layer.borderWidth = 4
+        iglooButton.layer.borderColor = UIColor.blue.cgColor
         resetSelection(button1: beachButton, button2: cityButton, button3: forestButton)
     }
     
@@ -95,8 +95,8 @@ class QuizViewController: UIViewController {
         valuesFromAnswers[0] = 4
         print("Baratheon")
         
-        forestButton.layer.borderWidth = 2
-        forestButton.layer.borderColor = UIColor.red.cgColor
+        forestButton.layer.borderWidth = 4
+        forestButton.layer.borderColor = UIColor.blue.cgColor
         resetSelection(button1: beachButton, button2: iglooButton, button3: cityButton)
     }
     
@@ -113,8 +113,8 @@ class QuizViewController: UIViewController {
         valuesFromAnswers[1] = 1
         print("Targaryen")
         
-        seafoodButton.layer.borderWidth = 2
-        seafoodButton.layer.borderColor = UIColor.red.cgColor
+        seafoodButton.layer.borderWidth = 4
+        seafoodButton.layer.borderColor = UIColor.blue.cgColor
         resetSelection(button1: burgerButton, button2: vegetarianButton, button3: turkeyButton)
     }
     
@@ -122,8 +122,8 @@ class QuizViewController: UIViewController {
         valuesFromAnswers[1] = 2
         print("Baratheon")
         
-        vegetarianButton.layer.borderWidth = 2
-        vegetarianButton.layer.borderColor = UIColor.red.cgColor
+        vegetarianButton.layer.borderWidth = 4
+        vegetarianButton.layer.borderColor = UIColor.blue.cgColor
         resetSelection(button1: seafoodButton, button2: burgerButton, button3: turkeyButton)
     }
     
@@ -131,8 +131,8 @@ class QuizViewController: UIViewController {
         valuesFromAnswers[1] = 3
         print("Stark")
         
-        turkeyButton.layer.borderWidth = 2
-        turkeyButton.layer.borderColor = UIColor.red.cgColor
+        turkeyButton.layer.borderWidth = 4
+        turkeyButton.layer.borderColor = UIColor.blue.cgColor
         resetSelection(button1: seafoodButton, button2: vegetarianButton, button3: burgerButton)
     }
     
@@ -140,8 +140,8 @@ class QuizViewController: UIViewController {
         valuesFromAnswers[1] = 4
         print("Lannister")
         
-        burgerButton.layer.borderWidth = 2
-        burgerButton.layer.borderColor = UIColor.red.cgColor
+        burgerButton.layer.borderWidth = 4
+        burgerButton.layer.borderColor = UIColor.blue.cgColor
         resetSelection(button1: seafoodButton, button2: vegetarianButton, button3: turkeyButton)
     }
     
@@ -156,8 +156,8 @@ class QuizViewController: UIViewController {
         valuesFromAnswers[2] = 1
         print("Targaryen")
         
-        sleepButton.layer.borderWidth = 2
-        sleepButton.layer.borderColor = UIColor.red.cgColor
+        sleepButton.layer.borderWidth = 4
+        sleepButton.layer.borderColor = UIColor.blue.cgColor
         resetSelection(button1: totsButton, button2: appsButton, button3: gamesButton)
     }
     
@@ -165,8 +165,8 @@ class QuizViewController: UIViewController {
         valuesFromAnswers[2] = 2
         print("Lannister")
         
-        totsButton.layer.borderWidth = 2
-        totsButton.layer.borderColor = UIColor.red.cgColor
+        totsButton.layer.borderWidth = 4
+        totsButton.layer.borderColor = UIColor.blue.cgColor
         resetSelection(button1: sleepButton, button2: appsButton, button3: gamesButton)
     }
   
@@ -175,8 +175,8 @@ class QuizViewController: UIViewController {
         valuesFromAnswers[2] = 3
         print("Stark")
         
-        appsButton.layer.borderWidth = 2
-        appsButton.layer.borderColor = UIColor.red.cgColor
+        appsButton.layer.borderWidth = 4
+        appsButton.layer.borderColor = UIColor.blue.cgColor
         resetSelection(button1: totsButton, button2: sleepButton, button3: gamesButton)
     }
     
@@ -184,8 +184,8 @@ class QuizViewController: UIViewController {
         valuesFromAnswers[2] = 4
         print("Baratheon")
         
-        gamesButton.layer.borderWidth = 2
-        gamesButton.layer.borderColor = UIColor.red.cgColor
+        gamesButton.layer.borderWidth = 4
+        gamesButton.layer.borderColor = UIColor.blue.cgColor
         resetSelection(button1: totsButton, button2: appsButton, button3: sleepButton)
     }
     /* ----------------------- End Q3 ---------------------------- */
@@ -199,8 +199,8 @@ class QuizViewController: UIViewController {
         valuesFromAnswers[3] = 1
         print("Targaryen")
 
-        islandButton.layer.borderWidth = 2
-        islandButton.layer.borderColor = UIColor.red.cgColor
+        islandButton.layer.borderWidth = 4
+        islandButton.layer.borderColor = UIColor.blue.cgColor
         resetSelection(button1: mansionButton, button2: jetButton, button3: carButton)
     }
     
@@ -208,8 +208,8 @@ class QuizViewController: UIViewController {
         valuesFromAnswers[3] = 2
         print("Lannister")
         
-        mansionButton.layer.borderWidth = 2
-        mansionButton.layer.borderColor = UIColor.red.cgColor
+        mansionButton.layer.borderWidth = 4
+        mansionButton.layer.borderColor = UIColor.blue.cgColor
         resetSelection(button1: islandButton, button2: jetButton, button3: carButton)
     }
     
@@ -217,8 +217,8 @@ class QuizViewController: UIViewController {
         valuesFromAnswers[3] = 3
         print("Stark")
         
-        jetButton.layer.borderWidth = 2
-        jetButton.layer.borderColor = UIColor.red.cgColor
+        jetButton.layer.borderWidth = 4
+        jetButton.layer.borderColor = UIColor.blue.cgColor
         resetSelection(button1: mansionButton, button2: islandButton, button3: carButton)
     }
     
@@ -226,8 +226,8 @@ class QuizViewController: UIViewController {
         valuesFromAnswers[3] = 4
         print("Baratheon")
         
-        carButton.layer.borderWidth = 2
-        carButton.layer.borderColor = UIColor.red.cgColor
+        carButton.layer.borderWidth = 4
+        carButton.layer.borderColor = UIColor.blue.cgColor
         resetSelection(button1: mansionButton, button2: jetButton, button3: islandButton)
     }
     /* ----------------------- End Q4 ---------------------------- */
@@ -241,8 +241,8 @@ class QuizViewController: UIViewController {
         valuesFromAnswers[4] = 1
         print("Targaryen")
         
-        dragonButton.layer.borderWidth = 2
-        dragonButton.layer.borderColor = UIColor.red.cgColor
+        dragonButton.layer.borderWidth = 4
+        dragonButton.layer.borderColor = UIColor.blue.cgColor
         resetSelection(button1: lionButton, button2: ursulaButton, button3: hunterButton)
     }
     
@@ -250,8 +250,8 @@ class QuizViewController: UIViewController {
         valuesFromAnswers[4] = 2
         print("Lannister")
         
-        lionButton.layer.borderWidth = 2
-        lionButton.layer.borderColor = UIColor.red.cgColor
+        lionButton.layer.borderWidth = 4
+        lionButton.layer.borderColor = UIColor.blue.cgColor
         resetSelection(button1: dragonButton, button2: ursulaButton, button3: hunterButton)
     }
     
@@ -259,8 +259,8 @@ class QuizViewController: UIViewController {
         valuesFromAnswers[4] = 3
         print("Stark")
         
-        ursulaButton.layer.borderWidth = 2
-        ursulaButton.layer.borderColor = UIColor.red.cgColor
+        ursulaButton.layer.borderWidth = 4
+        ursulaButton.layer.borderColor = UIColor.blue.cgColor
         resetSelection(button1: lionButton, button2: dragonButton, button3: hunterButton)
     }
     
@@ -268,8 +268,8 @@ class QuizViewController: UIViewController {
         valuesFromAnswers[4] = 4
         print("Baratheon")
         
-        hunterButton.layer.borderWidth = 2
-        hunterButton.layer.borderColor = UIColor.red.cgColor
+        hunterButton.layer.borderWidth = 4
+        hunterButton.layer.borderColor = UIColor.blue.cgColor
         resetSelection(button1: lionButton, button2: ursulaButton, button3: dragonButton)
     }
     

@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -840,7 +840,7 @@
                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="304" id="A1r-5f-Au0"/>
                                                     <constraint firstAttribute="height" constant="21" id="yFA-Sz-lkq"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -892,7 +892,7 @@
                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="304" id="1qV-h9-3eQ"/>
                                                     <constraint firstAttribute="height" constant="21" id="CSj-i6-O9B"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -944,7 +944,7 @@
                                                     <constraint firstAttribute="height" constant="21" id="FYe-0f-aFf"/>
                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="304" id="QcG-QS-OTg"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -996,7 +996,7 @@
                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="304" id="3MV-LV-XM1"/>
                                                     <constraint firstAttribute="height" constant="44" id="68m-h2-KMO"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -1048,7 +1048,7 @@
                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="304" id="7xV-WQ-ZdU"/>
                                                     <constraint firstAttribute="height" constant="21" id="aqy-vi-ZxH"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -1122,7 +1122,7 @@
                                             <constraint firstItem="b48-gw-JqP" firstAttribute="centerX" secondItem="6Zt-ij-LlB" secondAttribute="centerX" id="LmR-Fq-H4Q"/>
                                             <constraint firstItem="7GT-Q2-wJ0" firstAttribute="centerX" secondItem="6Zt-ij-LlB" secondAttribute="centerX" id="MY8-F6-03m"/>
                                             <constraint firstItem="yCa-Wr-zrI" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Zt-ij-LlB" secondAttribute="leading" constant="92" id="NwF-IC-EB6"/>
-                                            <constraint firstItem="b48-gw-JqP" firstAttribute="leading" secondItem="6Zt-ij-LlB" secondAttribute="leading" constant="8" id="OEV-Eq-kds"/>
+                                            <constraint firstItem="b48-gw-JqP" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Zt-ij-LlB" secondAttribute="leading" constant="8" id="OEV-Eq-kds"/>
                                             <constraint firstItem="xkU-fI-jsr" firstAttribute="centerX" secondItem="6Zt-ij-LlB" secondAttribute="centerX" id="QBc-9V-MuS"/>
                                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="gPq-j3-1ug" secondAttribute="trailing" constant="8" id="U15-uP-3vR"/>
                                             <constraint firstItem="O3W-BK-jrQ" firstAttribute="centerX" secondItem="6Zt-ij-LlB" secondAttribute="centerX" id="UdE-dW-wCe"/>
@@ -1141,7 +1141,7 @@
                                             <constraint firstItem="gPq-j3-1ug" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Zt-ij-LlB" secondAttribute="leading" constant="8" id="ruc-ce-WM3"/>
                                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="yCa-Wr-zrI" secondAttribute="trailing" constant="92" id="sMf-b6-bEg"/>
                                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="ag8-CT-TIC" secondAttribute="trailing" constant="8" id="uUU-Ke-FSp"/>
-                                            <constraint firstAttribute="trailing" secondItem="b48-gw-JqP" secondAttribute="trailing" constant="8" id="wol-h5-egv"/>
+                                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="b48-gw-JqP" secondAttribute="trailing" constant="8" id="wol-h5-egv"/>
                                             <constraint firstItem="gPq-j3-1ug" firstAttribute="centerX" secondItem="6Zt-ij-LlB" secondAttribute="centerX" id="ywb-DJ-aXa"/>
                                             <constraint firstItem="Y46-Yq-dNN" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Zt-ij-LlB" secondAttribute="leading" constant="8" id="z93-te-sU1"/>
                                         </constraints>
