@@ -11,14 +11,15 @@ import UIKit
 class ARViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
 
     @IBOutlet var GotHousesPicker: UIPickerView!
+    @IBOutlet var sigilImageView: UIImageView!
     
     let applicationDelegate: AppDelegate = UIApplication.shared.delegate as! AppDelegate
-    var quizTaken: Bool = true;
+    var quizTaken: Bool = false;
     var myHouse: String = ""
     var houseDataToPass: String = ""
     
     /* Array to hold names of GoT houses to display in picker view */
-    let housesPickerData = ["Targaryen", "Stark", "Baratheon", "Lannister"]
+    let housesPickerData = ["Baratheon", "Lannister", "Stark", "Targaryen"]
 
     
     override func viewDidLoad() {
@@ -27,13 +28,19 @@ class ARViewController: UIViewController, UIPickerViewDelegate, UIPickerViewData
         // Do any additional setup after loading the view.
         
         //Show the pickerView middle roas as the selected one
-        GotHousesPicker.selectRow(Int(housesPickerData.count / 2), inComponent: 0, animated: false)
-        
+        if GotHousesPicker != nil {
+            GotHousesPicker.selectRow(Int(housesPickerData.count / 2), inComponent: 0, animated: false)
+        }
         //Get the house result from the
         myHouse = applicationDelegate.userData[0] as! String
-        if myHouse == "Unsaved" {
-            quizTaken = false
+        if myHouse != "Unsaved" {
+            quizTaken = true
+            myHouse = applicationDelegate.userData[1] as! String
+            if sigilImageView != nil {
+                sigilImageView.image = UIImage(named: applicationDelegate.userData[2] as! String)
+            }
         }
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -44,7 +51,13 @@ class ARViewController: UIViewController, UIPickerViewDelegate, UIPickerViewData
 
     @IBAction func myARButtonTapped(_ sender: Any) {
         //If the quiz has not been completed and results save, throw error
-        if !quizTaken {
+        //myHouse = applicationDelegate.userData[1] as! String
+        myHouse = applicationDelegate.userData[0] as! String
+        if myHouse != "Unsaved" {
+            quizTaken = true
+            myHouse = applicationDelegate.userData[1] as! String
+            
+        } else {
             showErrorMessage(title: "No AR Results", message: "Please complete My House quiz before displaying AR!")
             return;
         }

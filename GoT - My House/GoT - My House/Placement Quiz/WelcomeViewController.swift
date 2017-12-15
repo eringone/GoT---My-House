@@ -61,8 +61,9 @@ class WelcomeViewController: UIViewController {
             else if mostFrequent == 4 {
                 applicationDelegate.userData[1] = "Baratheon"
             }
-            
+            let arViewController : ARViewController = ARViewController(nibName: nil, bundle: nil)
             loadUserData()
+            arViewController.viewDidLoad()
         }
     }
     

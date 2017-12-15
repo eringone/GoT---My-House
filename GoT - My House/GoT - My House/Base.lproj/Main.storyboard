@@ -17,6 +17,7 @@
                         <rect key="frame" x="0.0" y="975" width="768" height="49"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     </tabBar>
                     <connections>
                         <segue destination="Hwp-en-TPs" kind="relationship" relationship="viewControllers" id="BJc-fy-PKj"/>
@@ -542,32 +543,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose which House's sigil you'd like to view!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kz6-5K-Hbo">
-                                <rect key="frame" x="26" y="239" width="268" height="66"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="268" id="Ir2-p0-9Ak"/>
-                                    <constraint firstAttribute="height" constant="66" id="Zk1-Og-szt"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M0i-Ak-LRR">
-                                <rect key="frame" x="62" y="133" width="196" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="196" id="2ij-hy-nRj"/>
-                                    <constraint firstAttribute="height" constant="30" id="pyh-Yb-8Vf"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <state key="normal" title="Display My AR"/>
-                                <connections>
-                                    <action selector="myARButtonTapped:" destination="9CO-ax-kmj" eventType="touchUpInside" id="zcs-pr-L4X"/>
-                                </connections>
-                            </button>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bqF-Zh-jgM">
-                                <rect key="frame" x="0.0" y="305" width="320" height="162"/>
+                                <rect key="frame" x="0.0" y="330" width="320" height="143"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="162" id="FKF-Ok-8Pd"/>
+                                    <constraint firstAttribute="height" constant="143" id="FKF-Ok-8Pd"/>
                                 </constraints>
                                 <connections>
                                     <outlet property="dataSource" destination="9CO-ax-kmj" id="aeW-b8-8Mx"/>
@@ -575,12 +554,12 @@
                                 </connections>
                             </pickerView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Display AR for your quiz result!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X44-xK-gch">
-                                <rect key="frame" x="26" y="77" width="268" height="66"/>
+                                <rect key="frame" x="26" y="64" width="268" height="66"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="66" id="JG0-5T-fB7"/>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="268" id="SGH-Cx-uiU"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -596,23 +575,45 @@
                                     <action selector="pickedARButtonTapped:" destination="9CO-ax-kmj" eventType="touchUpInside" id="Q9Y-re-crd"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose which House's sigil you'd like to view!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kz6-5K-Hbo">
+                                <rect key="frame" x="25.5" y="256" width="269.5" height="66"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="268" id="Ir2-p0-9Ak"/>
+                                    <constraint firstAttribute="height" constant="66" id="Zk1-Og-szt"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M0i-Ak-LRR">
+                                <rect key="frame" x="62" y="130" width="196" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="196" id="2ij-hy-nRj"/>
+                                    <constraint firstAttribute="height" constant="30" id="pyh-Yb-8Vf"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="Display My AR"/>
+                                <connections>
+                                    <action selector="myARButtonTapped:" destination="9CO-ax-kmj" eventType="touchUpInside" id="zcs-pr-L4X"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="M0i-Ak-LRR" firstAttribute="top" secondItem="JmB-5j-vgB" secondAttribute="top" constant="69" id="9p6-8B-Fax"/>
-                            <constraint firstItem="bqF-Zh-jgM" firstAttribute="leading" secondItem="JmB-5j-vgB" secondAttribute="leading" id="HQR-Ul-vrm"/>
-                            <constraint firstItem="Kz6-5K-Hbo" firstAttribute="centerX" secondItem="T4d-ew-1cm" secondAttribute="centerX" id="LT5-Ct-EmO"/>
-                            <constraint firstItem="bqF-Zh-jgM" firstAttribute="top" secondItem="Kz6-5K-Hbo" secondAttribute="bottom" id="LV3-PA-WCv"/>
-                            <constraint firstItem="X44-xK-gch" firstAttribute="top" secondItem="JmB-5j-vgB" secondAttribute="top" constant="13" id="LqD-aa-LrP"/>
-                            <constraint firstItem="0l3-al-ct5" firstAttribute="centerX" secondItem="T4d-ew-1cm" secondAttribute="centerX" id="PYs-Yc-AUB"/>
-                            <constraint firstItem="Kz6-5K-Hbo" firstAttribute="top" secondItem="M0i-Ak-LRR" secondAttribute="bottom" constant="76" id="Pzs-uC-Rrg"/>
-                            <constraint firstItem="bqF-Zh-jgM" firstAttribute="trailing" secondItem="JmB-5j-vgB" secondAttribute="trailing" id="UzP-wj-Zgf"/>
-                            <constraint firstItem="0l3-al-ct5" firstAttribute="top" secondItem="bqF-Zh-jgM" secondAttribute="bottom" constant="14" id="lFB-As-Ism"/>
-                            <constraint firstItem="X44-xK-gch" firstAttribute="centerX" secondItem="T4d-ew-1cm" secondAttribute="centerX" id="n91-co-Mvi"/>
-                            <constraint firstItem="JmB-5j-vgB" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Kz6-5K-Hbo" secondAttribute="trailing" constant="26" id="n9R-pk-z0Y"/>
-                            <constraint firstItem="bqF-Zh-jgM" firstAttribute="centerX" secondItem="T4d-ew-1cm" secondAttribute="centerX" id="q8d-JE-Wag"/>
-                            <constraint firstItem="M0i-Ak-LRR" firstAttribute="centerX" secondItem="T4d-ew-1cm" secondAttribute="centerX" id="u1W-dz-Ku6"/>
-                            <constraint firstItem="Kz6-5K-Hbo" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="JmB-5j-vgB" secondAttribute="leading" constant="26" id="yVE-W9-lru"/>
+                            <constraint firstItem="0l3-al-ct5" firstAttribute="top" secondItem="bqF-Zh-jgM" secondAttribute="bottom" constant="8" id="2sc-U8-dtV"/>
+                            <constraint firstItem="Kz6-5K-Hbo" firstAttribute="top" secondItem="M0i-Ak-LRR" secondAttribute="bottom" constant="96" id="5Ix-YX-89K"/>
+                            <constraint firstItem="bqF-Zh-jgM" firstAttribute="trailing" secondItem="JmB-5j-vgB" secondAttribute="trailing" id="9RZ-rz-KID"/>
+                            <constraint firstItem="Kz6-5K-Hbo" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="T4d-ew-1cm" secondAttribute="leading" constant="15" id="AGM-Z7-V6z"/>
+                            <constraint firstItem="Kz6-5K-Hbo" firstAttribute="centerX" secondItem="T4d-ew-1cm" secondAttribute="centerX" id="CGW-k6-wNS"/>
+                            <constraint firstItem="X44-xK-gch" firstAttribute="top" secondItem="JmB-5j-vgB" secondAttribute="top" id="JaO-pB-tYz"/>
+                            <constraint firstItem="M0i-Ak-LRR" firstAttribute="centerX" secondItem="T4d-ew-1cm" secondAttribute="centerX" id="MZe-jc-jWY"/>
+                            <constraint firstItem="bqF-Zh-jgM" firstAttribute="centerX" secondItem="T4d-ew-1cm" secondAttribute="centerX" id="O5J-hX-BkM"/>
+                            <constraint firstItem="X44-xK-gch" firstAttribute="centerX" secondItem="T4d-ew-1cm" secondAttribute="centerX" id="WwB-O5-Svv"/>
+                            <constraint firstItem="0l3-al-ct5" firstAttribute="centerX" secondItem="T4d-ew-1cm" secondAttribute="centerX" id="hJy-xA-a3j"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Kz6-5K-Hbo" secondAttribute="trailing" constant="15" id="my4-fm-xCA"/>
+                            <constraint firstItem="bqF-Zh-jgM" firstAttribute="leading" secondItem="JmB-5j-vgB" secondAttribute="leading" id="tjn-EV-EWM"/>
+                            <constraint firstItem="M0i-Ak-LRR" firstAttribute="top" secondItem="X44-xK-gch" secondAttribute="bottom" id="uqF-lg-zS3"/>
+                            <constraint firstItem="bqF-Zh-jgM" firstAttribute="top" secondItem="Kz6-5K-Hbo" secondAttribute="bottom" constant="8" id="v7a-yu-Zo3"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="JmB-5j-vgB"/>
                     </view>
@@ -624,7 +625,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5pW-8M-wHW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2464.8000000000002" y="1683.5082458770617"/>
+            <point key="canvasLocation" x="2463.75" y="1682.7464788732395"/>
         </scene>
         <!--Title-->
         <scene sceneID="5E0-0M-HIO">
