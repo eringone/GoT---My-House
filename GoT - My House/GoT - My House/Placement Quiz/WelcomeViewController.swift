@@ -96,7 +96,7 @@ class WelcomeViewController: UIViewController {
         applicationDelegate.userData[2] = houseName + " Sigil.png"
 
         sigilImageView.image = UIImage(named: applicationDelegate.userData[2] as! String)
-        startJourneyLabel.text! = "Enjoy your journey and always remember your house words '" + houseWords + "'"
+        startJourneyLabel.text! = "Enjoy your journey and always remember your house words, '" + houseWords + "'"
         quizButton.setTitle("Retake Quiz", for: .normal)
         
     }
